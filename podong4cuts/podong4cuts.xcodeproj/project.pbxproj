@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07F5E6902A02411400384D44 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5E68F2A02411400384D44 /* Color+.swift */; };
+		07F5E6942A02417200384D44 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5E6932A02417200384D44 /* HomeView.swift */; };
+		07F5E6982A02419600384D44 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5E6972A02419600384D44 /* CameraView.swift */; };
+		07F5E69B2A0241CA00384D44 /* FourCutStudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5E69A2A0241CA00384D44 /* FourCutStudioView.swift */; };
 		67E301792A023ED500A46BF9 /* podong4cutsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E301782A023ED500A46BF9 /* podong4cutsApp.swift */; };
 		67E3017B2A023ED500A46BF9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E3017A2A023ED500A46BF9 /* ContentView.swift */; };
 		67E3017D2A023ED700A46BF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67E3017C2A023ED700A46BF9 /* Assets.xcassets */; };
@@ -34,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07F5E68F2A02411400384D44 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
+		07F5E6932A02417200384D44 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		07F5E6972A02419600384D44 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		07F5E69A2A0241CA00384D44 /* FourCutStudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourCutStudioView.swift; sourceTree = "<group>"; };
 		67E301752A023ED500A46BF9 /* podong4cuts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = podong4cuts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67E301782A023ED500A46BF9 /* podong4cutsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = podong4cutsApp.swift; sourceTree = "<group>"; };
 		67E3017A2A023ED500A46BF9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +79,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07F5E68D2A0240C200384D44 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				67E3017C2A023ED700A46BF9 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		07F5E68E2A0240F800384D44 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				07F5E68F2A02411400384D44 /* Color+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		07F5E6912A02413000384D44 /* Src */ = {
+			isa = PBXGroup;
+			children = (
+				07F5E6922A02413E00384D44 /* Team1_Map */,
+				07F5E6952A02417D00384D44 /* Team2_AR */,
+				07F5E6992A02419900384D44 /* Team3_FCS */,
+			);
+			path = Src;
+			sourceTree = "<group>";
+		};
+		07F5E6922A02413E00384D44 /* Team1_Map */ = {
+			isa = PBXGroup;
+			children = (
+				07F5E6932A02417200384D44 /* HomeView.swift */,
+			);
+			path = Team1_Map;
+			sourceTree = "<group>";
+		};
+		07F5E6952A02417D00384D44 /* Team2_AR */ = {
+			isa = PBXGroup;
+			children = (
+				07F5E6972A02419600384D44 /* CameraView.swift */,
+			);
+			path = Team2_AR;
+			sourceTree = "<group>";
+		};
+		07F5E6992A02419900384D44 /* Team3_FCS */ = {
+			isa = PBXGroup;
+			children = (
+				07F5E69A2A0241CA00384D44 /* FourCutStudioView.swift */,
+			);
+			path = Team3_FCS;
+			sourceTree = "<group>";
+		};
 		67E3016C2A023ED500A46BF9 = {
 			isa = PBXGroup;
 			children = (
@@ -96,7 +154,9 @@
 			children = (
 				67E301782A023ED500A46BF9 /* podong4cutsApp.swift */,
 				67E3017A2A023ED500A46BF9 /* ContentView.swift */,
-				67E3017C2A023ED700A46BF9 /* Assets.xcassets */,
+				07F5E68D2A0240C200384D44 /* Resources */,
+				07F5E68E2A0240F800384D44 /* Extensions */,
+				07F5E6912A02413000384D44 /* Src */,
 				67E3017E2A023ED700A46BF9 /* Preview Content */,
 			);
 			path = podong4cuts;
@@ -258,6 +318,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				67E3017B2A023ED500A46BF9 /* ContentView.swift in Sources */,
+				07F5E69B2A0241CA00384D44 /* FourCutStudioView.swift in Sources */,
+				07F5E6942A02417200384D44 /* HomeView.swift in Sources */,
+				07F5E6902A02411400384D44 /* Color+.swift in Sources */,
+				07F5E6982A02419600384D44 /* CameraView.swift in Sources */,
 				67E301792A023ED500A46BF9 /* podong4cutsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
