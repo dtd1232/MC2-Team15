@@ -11,6 +11,7 @@
 		07F5E6942A02417200384D44 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5E6932A02417200384D44 /* HomeView.swift */; };
 		07F5E6982A02419600384D44 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5E6972A02419600384D44 /* CameraView.swift */; };
 		07F5E69B2A0241CA00384D44 /* FourCutStudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5E69A2A0241CA00384D44 /* FourCutStudioView.swift */; };
+		1178F8B72A02C8EC00F5EC00 /* test_sean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178F8B62A02C8EC00F5EC00 /* test_sean.swift */; };
 		67E301792A023ED500A46BF9 /* podong4cutsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E301782A023ED500A46BF9 /* podong4cutsApp.swift */; };
 		67E3017B2A023ED500A46BF9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E3017A2A023ED500A46BF9 /* ContentView.swift */; };
 		67E3017D2A023ED700A46BF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67E3017C2A023ED700A46BF9 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		07F5E6932A02417200384D44 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		07F5E6972A02419600384D44 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		07F5E69A2A0241CA00384D44 /* FourCutStudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourCutStudioView.swift; sourceTree = "<group>"; };
+		1178F8B62A02C8EC00F5EC00 /* test_sean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test_sean.swift; sourceTree = "<group>"; };
 		67E301752A023ED500A46BF9 /* podong4cuts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = podong4cuts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67E301782A023ED500A46BF9 /* podong4cutsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = podong4cutsApp.swift; sourceTree = "<group>"; };
 		67E3017A2A023ED500A46BF9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				07F5E6932A02417200384D44 /* HomeView.swift */,
+				1178F8B62A02C8EC00F5EC00 /* test_sean.swift */,
 			);
 			path = Team1_Map;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1178F8B72A02C8EC00F5EC00 /* test_sean.swift in Sources */,
 				67E3017B2A023ED500A46BF9 /* ContentView.swift in Sources */,
 				07F5E69B2A0241CA00384D44 /* FourCutStudioView.swift in Sources */,
 				07F5E6942A02417200384D44 /* HomeView.swift in Sources */,
