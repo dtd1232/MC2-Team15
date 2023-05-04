@@ -9,7 +9,11 @@ import SwiftUI
 
 struct test_sean: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            //sample code
+            Text("test")
+        }
     }
 }
 
