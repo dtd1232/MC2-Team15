@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct test_sean: View {
     var body: some View {
@@ -13,6 +14,10 @@ struct test_sean: View {
             Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
             //sample code
             Text("test")
+            Text("test")
+            Text("test")
+            Text("test")
+            
         }
     }
 }
