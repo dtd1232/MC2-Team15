@@ -8,8 +8,29 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State var index = 0
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView(selection:$index) {
+            MapViewControll()
+                .tabItem {
+                    Image(systemName: "map.circle")
+                        .font(.system(size: 45))
+                }
+                .tag(0)
+            CameraView()
+                .tabItem {
+                    Image(systemName: "camera.circle")
+                        .font(.system(size: 45))
+                }
+                .tag(1)
+            FourCutStudioView()
+                .tabItem {
+                    Image(systemName: "film.circle")
+                        .font(.system(size: 45))
+                }
+                .tag(2)
+        }
     }
 }
 

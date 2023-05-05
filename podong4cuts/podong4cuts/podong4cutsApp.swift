@@ -11,7 +11,7 @@ import SwiftUI
 struct podong4cutsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }
