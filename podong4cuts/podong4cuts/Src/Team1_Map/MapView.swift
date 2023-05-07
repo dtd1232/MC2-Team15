@@ -39,10 +39,11 @@ struct MapView: View {
                                 .fill(Color.white)
                                 .frame(width: 45, height: 45)
                             
+                            //TODO : 애플 지도 참조해서 버튼 디자인 리팩토링
                             Button(action: {
                                 focusOnUserLocation()
                             }) {
-                                Image(systemName: "paperplane.circle.fill")
+                                Image(systemName: "location.circle.fill")
                             }
                             .font(.system(size: 45))
                             .foregroundColor(Color.black)
