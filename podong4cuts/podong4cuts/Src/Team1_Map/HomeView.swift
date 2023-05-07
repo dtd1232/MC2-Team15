@@ -12,7 +12,7 @@ struct HomeView: View {
     
     var body: some View {
         TabView(selection:$index) {
-            MapViewControll()
+            MapView()
                 .tabItem {
                     Image(systemName: "map.circle")
                         .font(.system(size: 45))

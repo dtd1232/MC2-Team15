@@ -10,13 +10,16 @@ import MapKit
 
 struct MapViewControll: View {
     @StateObject var manager = LocationManager()
+    @State private var reloadMapView = false
     
     var body: some View {
         ZStack{
-            MapView()
+            let currentMap = MapView().id(reloadMapView)
+            currentMap
             
             Button("test") {
                 print("SSIBAL")
+                reloadMapView.toggle()
             }
         }
     }

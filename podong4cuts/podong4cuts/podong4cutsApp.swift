@@ -12,6 +12,7 @@ struct podong4cutsApp: App {
     var body: some Scene {
         WindowGroup {
             HomeView()
+//            ContentView_2()
         }
     }
 }
