@@ -10,7 +10,7 @@ import CoreLocation
 
 class LocationManager: NSObject,CLLocationManagerDelegate, ObservableObject {
     @Published var region = MKCoordinateRegion()
-    private let manager = CLLocationManager()
+    private let manager = CLLocationManager() 
     
     override init() {
         super.init()

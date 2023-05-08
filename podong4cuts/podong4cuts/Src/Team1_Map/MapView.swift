@@ -17,15 +17,15 @@ struct MapView: View {
 //    @State var offset: CGFloat = 0
 //    @State var tracking: MapUserTrackingMode = .follow
 //    @State var flags: Bool = false
+//    @State private var reloadMapView = false
     @StateObject var manager = LocationManager()
-    @State private var reloadMapView = false
     @State private var currentLocationManager = CLLocationManager()
     
     var body: some View {
         VStack{
             ZStack{
                 MapViewModel(region: $manager.region, showUserLocation: true)
-                    .id(reloadMapView)
+//                    .id(reloadMapView)
                 //                Map(coordinateRegion: $manager.region,
                 //                    interactionModes: MapInteractionModes.all,
                 //                    showsUserLocation: true,
