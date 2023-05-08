@@ -16,7 +16,7 @@ struct MapView: View {
     //                               longitudeDelta: 0.015))
     //    @State var offset: CGFloat = 0
     @State var tracking: MapUserTrackingMode = .follow
-    //    @State var flags: Bool = false
+    //    MapView Reload 해야할 시 아래 variable 주석 해제 후 .id(reloadMapView)
     //    @State private var reloadMapView = false
     @StateObject var manager = LocationManager()
     @State private var currentLocationManager = CLLocationManager()
@@ -25,11 +25,13 @@ struct MapView: View {
     var body: some View {
         VStack{
             ZStack{
+                //MapViewModel로 구현, MkMapView
                 MapViewModel(region: $manager.region, annotations: annotations)
                     .onAppear{
                         addAnnotations()
                     }
-                //                Map(coordinateRegion: $manager.region,
+                //  Map Struct로 구현.
+                //  Map(coordinateRegion: $manager.region,
                 //                    interactionModes: MapInteractionModes.all,
                 //                    showsUserLocation: true,
                 //                    userTrackingMode: $tracking,
