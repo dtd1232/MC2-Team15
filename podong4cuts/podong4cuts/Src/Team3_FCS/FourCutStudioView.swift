@@ -26,7 +26,7 @@ struct FourCutStudioView: View {
             Rectangle()
                 .frame(width: 0, height: 50)
             
-            //인생네컷 사진프레임
+            //MARK: - 네컷 프레임
             
             GeometryReader { geo in
                 
@@ -43,7 +43,7 @@ struct FourCutStudioView: View {
                         Spacer()
                         //왼쪽
                         VStack{
-
+                            
                             Spacer()
                             
                             Rectangle()
@@ -87,7 +87,7 @@ struct FourCutStudioView: View {
             
             Spacer()
             
-            //출력 버튼
+            //MARK: - 출력 버튼
             ZStack{
                 
                 RoundedRectangle(cornerRadius: 30)
@@ -106,6 +106,8 @@ struct FourCutStudioView: View {
                 
             }
             .padding()
+            
+            Spacer()
             
         }
         .sheet(isPresented: $showImagePicker) {
