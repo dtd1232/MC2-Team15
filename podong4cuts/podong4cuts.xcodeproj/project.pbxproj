@@ -15,7 +15,6 @@
 		1178F8C02A04F73900F5EC00 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178F8BF2A04F73900F5EC00 /* LocationManager.swift */; };
 		11FEE6CD2A08E6FE00513041 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FEE6CC2A08E6FE00513041 /* CustomAnnotation.swift */; };
 		11FEE6CF2A08E76600513041 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FEE6CE2A08E76600513041 /* MapViewModel.swift */; };
-		67C411742A04FF8D00AD1D41 /* CustomMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C411732A04FF8D00AD1D41 /* CustomMarkerView.swift */; };
 		67E301792A023ED500A46BF9 /* podong4cutsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E301782A023ED500A46BF9 /* podong4cutsApp.swift */; };
 		67E3017B2A023ED500A46BF9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E3017A2A023ED500A46BF9 /* ContentView.swift */; };
 		67E3017D2A023ED700A46BF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67E3017C2A023ED700A46BF9 /* Assets.xcassets */; };
@@ -51,7 +50,6 @@
 		1178F8BF2A04F73900F5EC00 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		11FEE6CC2A08E6FE00513041 /* CustomAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
 		11FEE6CE2A08E76600513041 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
-		67C411732A04FF8D00AD1D41 /* CustomMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarkerView.swift; sourceTree = "<group>"; };
 		67E301752A023ED500A46BF9 /* podong4cuts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = podong4cuts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67E301782A023ED500A46BF9 /* podong4cutsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = podong4cutsApp.swift; sourceTree = "<group>"; };
 		67E3017A2A023ED500A46BF9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				07F5E6932A02417200384D44 /* HomeView.swift */,
-				67C411732A04FF8D00AD1D41 /* CustomMarkerView.swift */,
 				1178F8BB2A04E61900F5EC00 /* MapView.swift */,
 				1178F8BF2A04F73900F5EC00 /* LocationManager.swift */,
 				11FEE6CC2A08E6FE00513041 /* CustomAnnotation.swift */,
@@ -337,7 +334,6 @@
 				07F5E69B2A0241CA00384D44 /* FourCutStudioView.swift in Sources */,
 				07F5E6942A02417200384D44 /* HomeView.swift in Sources */,
 				1178F8C02A04F73900F5EC00 /* LocationManager.swift in Sources */,
-				67C411742A04FF8D00AD1D41 /* CustomMarkerView.swift in Sources */,
 				11FEE6CD2A08E6FE00513041 /* CustomAnnotation.swift in Sources */,
 				07F5E6902A02411400384D44 /* Color+.swift in Sources */,
 				07F5E6982A02419600384D44 /* CameraView.swift in Sources */,
