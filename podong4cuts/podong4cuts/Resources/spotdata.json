@@ -23,8 +23,8 @@
         "gallary": ["tomatilo-1", "tomatilo-2"],
         "cover" : "cover-tomatilo",
         "isOpened" : false,
-        "latitude" : 0,
-        "longitude" : 0
+        "latitude" : 36.0643,
+        "longitude" : 129.3875
     },
     
     {
@@ -37,8 +37,8 @@
         "gallary": ["ohbreman-1", "ohbreman-2"],
         "cover" : "cover-ohbreman",
         "isOpened" : false,
-        "latitude" : 0,
-        "longitude" : 0
+        "latitude" : 36.0646,
+        "longitude" : 129.3843
     },
     
     {
@@ -65,8 +65,8 @@
         "gallary": ["signpost-1", "signpost-2"],
         "cover" : "cover-signpost",
         "isOpened" : false,
-        "latitude" : 0,
-        "longitude" : 0
+        "latitude" : 36.0615,
+        "longitude" : 129.3812
     },
     
     {
@@ -79,8 +79,8 @@
         "gallary": ["whale-1", "whale-2"],
         "cover" : "cover-whale",
         "isOpened" : false,
-        "latitude" : 0,
-        "longitude" : 0
+        "latitude" : 36.0528,
+        "longitude" : 129.3783
     }
     
 ]
