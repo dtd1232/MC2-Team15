@@ -19,6 +19,10 @@ struct FourCutStudioView: View {
     
     var body: some View {
         ZStack {
+            Rectangle()
+                .fill(.black)
+                .frame(width: 400, height: 600)
+            
             HStack{
                 Spacer(minLength: 40)
                 VStack(spacing: 10) {
@@ -32,10 +36,12 @@ struct FourCutStudioView: View {
                             if let image = image1 {
                                 Image(uiImage: image)
                                     .resizable()
-                                    .scaledToFit()
+                                    .frame(width: 150, height: 200)
+                                    .scaledToFill()
                             } else {
                                 Rectangle()
                                     .fill(Color.gray)
+                                    .frame(width: 150, height: 200)
                             }
                         }
                         .buttonStyle(BorderlessButtonStyle())
@@ -47,10 +53,12 @@ struct FourCutStudioView: View {
                             if let image = image2 {
                                 Image(uiImage: image)
                                     .resizable()
-                                    .scaledToFit()
+                                    .frame(width: 150, height: 200)
+                                    .scaledToFill()
                             } else {
                                 Rectangle()
                                     .fill(Color.gray)
+                                    .frame(width: 150, height: 200)
                             }
                         }
                         .buttonStyle(BorderlessButtonStyle())
@@ -64,10 +72,12 @@ struct FourCutStudioView: View {
                             if let image = image3 {
                                 Image(uiImage: image)
                                     .resizable()
-                                    .scaledToFit()
+                                    .frame(width: 150, height: 200)
+                                    .scaledToFill()
                             } else {
                                 Rectangle()
                                     .fill(Color.gray)
+                                    .frame(width: 150, height: 200)
                             }
                         }
                         .buttonStyle(BorderlessButtonStyle())
@@ -79,14 +89,17 @@ struct FourCutStudioView: View {
                             if let image = image4 {
                                 Image(uiImage: image)
                                     .resizable()
-                                    .scaledToFit()
+                                    .frame(width: 150, height: 200)
+                                    .scaledToFill()
                             } else {
                                 Rectangle()
                                     .fill(Color.gray)
+                                    .frame(width: 150, height: 200)
                             }
                         }
                         .buttonStyle(BorderlessButtonStyle())
                     }
+                    .padding(.bottom, 40)
                     
                     Button("공유") {
                         
@@ -103,6 +116,8 @@ struct FourCutStudioView: View {
                 Spacer(minLength: 40)
             }
         }
+        
+        
         .sheet(isPresented: $showImagePicker) {
             ImagePicker(sourceType: .photoLibrary) { image in
                 switch self.selectedTag {
