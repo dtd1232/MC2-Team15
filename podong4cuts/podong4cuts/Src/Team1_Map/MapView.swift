@@ -20,30 +20,22 @@ struct MapView: View {
     //    @State private var reloadMapView = false
     @StateObject var manager = LocationManager()
     @State private var currentLocationManager = CLLocationManager()
-    
-    let MapLocations = [
-        MapLocation(name: "영일교",
-                    latitude: 36.06149,
-                    longitude: 129.38306
-                   ),
-        MapLocation(name: "Space Walk",
-                    latitude: 36.06437,
-                    longitude: 129.38937
-                   )
-    ]
+    @State private var annotations: [CustomAnnotation] = []
     
     var body: some View {
         VStack{
             ZStack{
-                //                MapViewModel(region: $manager.region, showUserLocation: true)
-                //                    .id(reloadMapView)
-                Map(coordinateRegion: $manager.region,
-                    interactionModes: MapInteractionModes.all,
-                    showsUserLocation: true,
-                    userTrackingMode: $tracking,
-                    annotationItems: MapLocations) { locations in
-                    MapMarker(coordinate: locations.coordinate, tint: .red)
-                }
+                MapViewModel(region: $manager.region, annotations: annotations)
+                    .onAppear{
+                        addAnnotations()
+                    }
+                //                Map(coordinateRegion: $manager.region,
+                //                    interactionModes: MapInteractionModes.all,
+                //                    showsUserLocation: true,
+                //                    userTrackingMode: $tracking,
+                //                    annotationItems: MapLocations) { locations in
+                //                    MapMarker(coordinate: locations.coordinate, tint: .red)
+                //                }
                 
                 HStack {
                     VStack(alignment: .leading) {
@@ -95,25 +87,18 @@ struct MapView: View {
         manager.region = MKCoordinateRegion(center: userLocation, span: MKCoordinateSpan(latitudeDelta: 0.015, longitudeDelta: 0.015))
     }
     
-    func updateUIView(_ uiView: MKMapView) {
-        uiView.setRegion(manager.region, animated: true)
+    func addAnnotations(){
+        // Create your custom annotations here
+        let MapLocations = [
+            CustomAnnotation(coordinate: CLLocationCoordinate2D(latitude: 36.06149, longitude: 129.38306), title: "영일교", subtitle: "Subtitle 1"),
+            CustomAnnotation(coordinate: CLLocationCoordinate2D(latitude: 36.06437, longitude: 129.38937), title: "Space Walk", subtitle: "Subtitle 2"),
+        ]
+        
+        // Add the annotations to the array
+        //        annotations.append(MapLocations)
+        annotations.append(contentsOf: MapLocations)
     }
 }
-
-//struct MapViewModel: UIViewRepresentable {
-//    @Binding var region: MKCoordinateRegion
-//    var showUserLocation: Bool
-//
-//    func makeUIView(context: Context) -> MKMapView {
-//        let mapView = MKMapView()
-//        mapView.showsUserLocation = showUserLocation
-//        return mapView
-//    }
-//
-//    func updateUIView(_ uiView: MKMapView, context: Context) {
-//        uiView.setRegion(region, animated: true)
-//    }
-//}
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
