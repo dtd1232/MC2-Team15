@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MapView: View {
+struct MapView_2: View {
     
     //property
     @ObservedObject var VM: PodongViewModel
@@ -37,8 +37,8 @@ struct MapView: View {
     }//】 Body
 }
 
-struct MapView_Previews: PreviewProvider {
+struct MapView_2_Previews: PreviewProvider {
     static var previews: some View {
-        MapView(VM: PodongViewModel(), data: AppData.sampleAppData)
+        MapView_2(VM: PodongViewModel(), data: AppData.sampleAppData)
     }
 }

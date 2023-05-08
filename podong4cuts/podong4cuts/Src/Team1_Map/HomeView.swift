@@ -14,28 +14,26 @@ struct HomeView: View {
     @StateObject var VM: PodongViewModel = PodongViewModel()
     
     var body: some View {
-        TabView(selection:$index) {
-            MapView()
-                .tabItem {
-                    Image(systemName: "map.circle")
-                        .font(.system(size: 45))
-                }
-                .tag(0)
-            CameraView()
-                .tabItem {
-                    Image(systemName: "camera.circle")
-                        .font(.system(size: 45))
-                }
-                .tag(1)
-            FourCutStudioView()
-                .tabItem {
-                    Image(systemName: "film.circle")
-                        .font(.system(size: 45))
-                }
-                .tag(2)
-        }
-    }
-        
+//        TabView(selection:$index) {
+//            MapView()
+//                .tabItem {
+//                    Image(systemName: "map.circle")
+//                        .font(.system(size: 45))
+//                }
+//                .tag(0)
+//            CameraView()
+//                .tabItem {
+//                    Image(systemName: "camera.circle")
+//                        .font(.system(size: 45))
+//                }
+//                .tag(1)
+//            FourCutStudioView()
+//                .tabItem {
+//                    Image(systemName: "film.circle")
+//                        .font(.system(size: 45))
+//                }
+//                .tag(2)
+//        }
         TabView{
             
             //1. MapView
@@ -58,11 +56,8 @@ struct HomeView: View {
                     Image(systemName: "film")
                     Text("포동 네컷")
                 }
-            
         }//: TabView
-        
-        
-    }//: Body
+    }//: body
 }
 
 struct HomeView_Previews: PreviewProvider {

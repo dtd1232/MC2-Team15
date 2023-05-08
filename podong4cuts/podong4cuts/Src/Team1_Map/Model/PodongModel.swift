@@ -19,6 +19,8 @@ struct AppData: Identifiable, Codable, Hashable {
     let gallary : [String]
     let cover : String
     var isOpened: Bool
+    let latitude: Double
+    let longitude: Double
    
     //Sample 데이터
     static let sampleAppData = AppData(
@@ -30,7 +32,9 @@ struct AppData: Identifiable, Codable, Hashable {
         location: "스페이스워크 주소",
         gallary: ["spacewalk-1", "spacewalk-2", "spacewalk-3"],
         cover : "cover-spacewalk",
-        isOpened: false
+        isOpened: false,
+        latitude: 36.06149,
+        longitude: 129.38306
     )//: Sample
     
 }//: AppData
