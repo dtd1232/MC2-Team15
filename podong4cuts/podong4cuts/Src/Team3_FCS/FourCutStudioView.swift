@@ -17,107 +17,97 @@ struct FourCutStudioView: View {
     @State private var showImagePicker = false
     @State private var selectedTag = 0
     
+    let spacing: CGFloat = 20
+    
     var body: some View {
-        ZStack {
-            Rectangle()
-                .fill(.black)
-                .frame(width: 400, height: 600)
+        
+        VStack{
             
-            HStack{
-                Spacer(minLength: 40)
-                VStack(spacing: 10) {
+            Rectangle()
+                .frame(width: 0, height: 50)
+            
+            //인생네컷 사진프레임
+            
+            GeometryReader { geo in
+                
+                let photoWidth: CGFloat = (geo.size.width - 3*spacing)/2
+                let photoheigth: CGFloat = (geo.size.height - 3*spacing)/2
+                
+                ZStack{
                     
+                    Image("test_4cutFrame")
+                        .resizable()
+                        .scaledToFill()
                     
-                    HStack(spacing: 10) {
-                        Button(action: {
-                            self.selectedTag = 1
-                            self.showImagePicker = true
-                        }) {
-                            if let image = image1 {
-                                Image(uiImage: image)
-                                    .resizable()
-                                    .frame(width: 150, height: 200)
-                                    .scaledToFill()
-                            } else {
-                                Rectangle()
-                                    .fill(Color.gray)
-                                    .frame(width: 150, height: 200)
-                            }
-                        }
-                        .buttonStyle(BorderlessButtonStyle())
-                        
-                        Button(action: {
-                            self.selectedTag = 2
-                            self.showImagePicker = true
-                        }) {
-                            if let image = image2 {
-                                Image(uiImage: image)
-                                    .resizable()
-                                    .frame(width: 150, height: 200)
-                                    .scaledToFill()
-                            } else {
-                                Rectangle()
-                                    .fill(Color.gray)
-                                    .frame(width: 150, height: 200)
-                            }
-                        }
-                        .buttonStyle(BorderlessButtonStyle())
-                    }
-                    
-                    HStack(spacing: 10) {
-                        Button(action: {
-                            self.selectedTag = 3
-                            self.showImagePicker = true
-                        }) {
-                            if let image = image3 {
-                                Image(uiImage: image)
-                                    .resizable()
-                                    .frame(width: 150, height: 200)
-                                    .scaledToFill()
-                            } else {
-                                Rectangle()
-                                    .fill(Color.gray)
-                                    .frame(width: 150, height: 200)
-                            }
-                        }
-                        .buttonStyle(BorderlessButtonStyle())
-                        
-                        Button(action: {
-                            self.selectedTag = 4
-                            self.showImagePicker = true
-                        }) {
-                            if let image = image4 {
-                                Image(uiImage: image)
-                                    .resizable()
-                                    .frame(width: 150, height: 200)
-                                    .scaledToFill()
-                            } else {
-                                Rectangle()
-                                    .fill(Color.gray)
-                                    .frame(width: 150, height: 200)
-                            }
-                        }
-                        .buttonStyle(BorderlessButtonStyle())
-                    }
-                    .padding(.bottom, 40)
-                    
-                    Button("공유") {
-                        
-                        if let image = createCompositeImage() {
+                    HStack{
+                        Spacer()
+                        //왼쪽
+                        VStack{
+
+                            Spacer()
                             
-                            let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
-                            UIApplication.shared.windows.first?.rootViewController?.present(activityViewController, animated: true)
+                            Rectangle()
+                                .fill(.gray)
+                                .frame(width: photoWidth, height: photoheigth)
                             
+                            Spacer()
+                            
+                            Rectangle()
+                                .fill(.gray)
+                                .frame(width: photoWidth, height: photoheigth)
+                            
+                            Spacer()
                         }
+                        
+                        Spacer()
+                        //오른쪽
+                        VStack{
+                            Spacer()
+                            
+                            Rectangle()
+                                .fill(.gray)
+                                .frame(width: photoWidth, height: photoheigth)
+                            
+                            Spacer()
+                            
+                            Rectangle()
+                                .fill(.gray)
+                                .frame(width: photoWidth, height: photoheigth)
+                            
+                            Spacer()
+                        }
+                        Spacer()
+                        
                     }
-                    .disabled(image1 == nil || image2 == nil || image3 == nil || image4 == nil)
+                    
+                    
+                }
+            }
+            .frame(width: 300, height: 400)
+            
+            Spacer()
+            
+            //출력 버튼
+            ZStack{
+                
+                RoundedRectangle(cornerRadius: 30)
+                    .fill(.black)
+                    .frame(width: 256, height: 55)
+                
+                HStack{
+                    
+                    Image(systemName: "square.and.arrow.up")
+                        .foregroundColor(.white)
+                    
+                    Text("공유하기")
+                        .foregroundColor(.white)
+                    
                 }
                 
-                Spacer(minLength: 40)
             }
+            .padding()
+            
         }
-        
-        
         .sheet(isPresented: $showImagePicker) {
             ImagePicker(sourceType: .photoLibrary) { image in
                 switch self.selectedTag {
