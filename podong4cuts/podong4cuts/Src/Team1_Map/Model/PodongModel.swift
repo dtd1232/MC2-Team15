@@ -19,6 +19,8 @@ struct AppData: Identifiable, Codable, Hashable {
     let gallary : [String]
     let cover : String
     var isOpened: Bool
+    let latitude: Double
+    let longitude: Double
    
     //Sample 데이터
     static let sampleAppData = AppData(
