@@ -18,6 +18,13 @@
 		67E3018A2A023ED700A46BF9 /* podong4cutsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E301892A023ED700A46BF9 /* podong4cutsTests.swift */; };
 		67E301942A023ED700A46BF9 /* podong4cutsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E301932A023ED700A46BF9 /* podong4cutsUITests.swift */; };
 		67E301962A023ED700A46BF9 /* podong4cutsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E301952A023ED700A46BF9 /* podong4cutsUITestsLaunchTests.swift */; };
+		CE7D092C2A0AA1ED0052AA7B /* CameraFrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D092B2A0AA1ED0052AA7B /* CameraFrameView.swift */; };
+		CE7D092E2A0AA2900052AA7B /* TempARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D092D2A0AA2900052AA7B /* TempARViewContainer.swift */; };
+		CE7D09312A0AA2D70052AA7B /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = CE7D09302A0AA2D70052AA7B /* Experience.rcproject */; };
+		CE7D09332A0AA3580052AA7B /* YoungIlDaeFaceTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D09322A0AA3580052AA7B /* YoungIlDaeFaceTracking.swift */; };
+		CE7D09352A0AA3E30052AA7B /* YoungIlDaeFaceTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D09342A0AA3E30052AA7B /* YoungIlDaeFaceTrackingViewController.swift */; };
+		CE7D09382A0AA40B0052AA7B /* Paperbag_Mask.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CE7D09362A0AA40B0052AA7B /* Paperbag_Mask.usdz */; };
+		CE7D09392A0AA40B0052AA7B /* Floating_Fox.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CE7D09372A0AA40B0052AA7B /* Floating_Fox.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +59,13 @@
 		67E3018F2A023ED700A46BF9 /* podong4cutsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = podong4cutsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67E301932A023ED700A46BF9 /* podong4cutsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = podong4cutsUITests.swift; sourceTree = "<group>"; };
 		67E301952A023ED700A46BF9 /* podong4cutsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = podong4cutsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CE7D092B2A0AA1ED0052AA7B /* CameraFrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFrameView.swift; sourceTree = "<group>"; };
+		CE7D092D2A0AA2900052AA7B /* TempARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempARViewContainer.swift; sourceTree = "<group>"; };
+		CE7D09302A0AA2D70052AA7B /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
+		CE7D09322A0AA3580052AA7B /* YoungIlDaeFaceTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoungIlDaeFaceTracking.swift; sourceTree = "<group>"; };
+		CE7D09342A0AA3E30052AA7B /* YoungIlDaeFaceTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoungIlDaeFaceTrackingViewController.swift; sourceTree = "<group>"; };
+		CE7D09362A0AA40B0052AA7B /* Paperbag_Mask.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Paperbag_Mask.usdz; sourceTree = "<group>"; };
+		CE7D09372A0AA40B0052AA7B /* Floating_Fox.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Floating_Fox.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +131,10 @@
 			isa = PBXGroup;
 			children = (
 				07F5E6972A02419600384D44 /* CameraView.swift */,
+				CE7D092B2A0AA1ED0052AA7B /* CameraFrameView.swift */,
+				CE7D092D2A0AA2900052AA7B /* TempARViewContainer.swift */,
+				CE7D09322A0AA3580052AA7B /* YoungIlDaeFaceTracking.swift */,
+				CE7D09342A0AA3E30052AA7B /* YoungIlDaeFaceTrackingViewController.swift */,
 			);
 			path = Team2_AR;
 			sourceTree = "<group>";
@@ -156,6 +174,7 @@
 				67E3017A2A023ED500A46BF9 /* ContentView.swift */,
 				07F5E68D2A0240C200384D44 /* Resources */,
 				07F5E68E2A0240F800384D44 /* Extensions */,
+				CE7D092F2A0AA2B10052AA7B /* ModelAssets */,
 				07F5E6912A02413000384D44 /* Src */,
 				67E3017E2A023ED700A46BF9 /* Preview Content */,
 			);
@@ -185,6 +204,16 @@
 				67E301952A023ED700A46BF9 /* podong4cutsUITestsLaunchTests.swift */,
 			);
 			path = podong4cutsUITests;
+			sourceTree = "<group>";
+		};
+		CE7D092F2A0AA2B10052AA7B /* ModelAssets */ = {
+			isa = PBXGroup;
+			children = (
+				CE7D09372A0AA40B0052AA7B /* Floating_Fox.usdz */,
+				CE7D09362A0AA40B0052AA7B /* Paperbag_Mask.usdz */,
+				CE7D09302A0AA2D70052AA7B /* Experience.rcproject */,
+			);
+			path = ModelAssets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,7 +321,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				67E301802A023ED700A46BF9 /* Preview Assets.xcassets in Resources */,
+				CE7D09392A0AA40B0052AA7B /* Floating_Fox.usdz in Resources */,
 				67E3017D2A023ED700A46BF9 /* Assets.xcassets in Resources */,
+				CE7D09382A0AA40B0052AA7B /* Paperbag_Mask.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +350,12 @@
 			files = (
 				67E3017B2A023ED500A46BF9 /* ContentView.swift in Sources */,
 				07F5E69B2A0241CA00384D44 /* FourCutStudioView.swift in Sources */,
+				CE7D09332A0AA3580052AA7B /* YoungIlDaeFaceTracking.swift in Sources */,
 				07F5E6942A02417200384D44 /* HomeView.swift in Sources */,
+				CE7D09352A0AA3E30052AA7B /* YoungIlDaeFaceTrackingViewController.swift in Sources */,
+				CE7D092E2A0AA2900052AA7B /* TempARViewContainer.swift in Sources */,
+				CE7D092C2A0AA1ED0052AA7B /* CameraFrameView.swift in Sources */,
+				CE7D09312A0AA2D70052AA7B /* Experience.rcproject in Sources */,
 				07F5E6902A02411400384D44 /* Color+.swift in Sources */,
 				07F5E6982A02419600384D44 /* CameraView.swift in Sources */,
 				67E301792A023ED500A46BF9 /* podong4cutsApp.swift in Sources */,
@@ -484,6 +520,8 @@
 				DEVELOPMENT_TEAM = 5BC63NF7HR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -513,6 +551,8 @@
 				DEVELOPMENT_TEAM = 5BC63NF7HR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
