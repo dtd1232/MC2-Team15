@@ -13,8 +13,18 @@
 		07F5E69B2A0241CA00384D44 /* FourCutStudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5E69A2A0241CA00384D44 /* FourCutStudioView.swift */; };
 		1178F8BC2A04E61900F5EC00 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178F8BB2A04E61900F5EC00 /* MapView.swift */; };
 		1178F8C02A04F73900F5EC00 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178F8BF2A04F73900F5EC00 /* LocationManager.swift */; };
-		67C411702A04DD3B00AD1D41 /* MapLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C4116F2A04DD3B00AD1D41 /* MapLocation.swift */; };
-		67C411742A04FF8D00AD1D41 /* CustomMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C411732A04FF8D00AD1D41 /* CustomMarkerView.swift */; };
+		11F1466A2A0936E00095F2F4 /* PodongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F146692A0936E00095F2F4 /* PodongViewModel.swift */; };
+		11F1466D2A0936F30095F2F4 /* PodongModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F1466C2A0936F30095F2F4 /* PodongModel.swift */; };
+		11F146772A0937180095F2F4 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F146702A0937180095F2F4 /* FilterView.swift */; };
+		11F146782A0937180095F2F4 /* FourCutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F146722A0937180095F2F4 /* FourCutView.swift */; };
+		11F146792A0937180095F2F4 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F146742A0937180095F2F4 /* DetailView.swift */; };
+		11F1467A2A0937180095F2F4 /* MapView_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F146752A0937180095F2F4 /* MapView_2.swift */; };
+		11F1467B2A0937180095F2F4 /* CoverButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F146762A0937180095F2F4 /* CoverButton.swift */; };
+		11F1467D2A093BFD0095F2F4 /* FrameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F1467C2A093BFD0095F2F4 /* FrameExtension.swift */; };
+		11F1467F2A093C040095F2F4 /* JsonDecodeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F1467E2A093C040095F2F4 /* JsonDecodeExtension.swift */; };
+		11F146812A093D990095F2F4 /* spotdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 11F146802A093D990095F2F4 /* spotdata.json */; };
+		11FEE6CD2A08E6FE00513041 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FEE6CC2A08E6FE00513041 /* CustomAnnotation.swift */; };
+		11FEE6CF2A08E76600513041 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FEE6CE2A08E76600513041 /* MapViewModel.swift */; };
 		67E301792A023ED500A46BF9 /* podong4cutsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E301782A023ED500A46BF9 /* podong4cutsApp.swift */; };
 		67E3017B2A023ED500A46BF9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E3017A2A023ED500A46BF9 /* ContentView.swift */; };
 		67E3017D2A023ED700A46BF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67E3017C2A023ED700A46BF9 /* Assets.xcassets */; };
@@ -48,8 +58,18 @@
 		07F5E69A2A0241CA00384D44 /* FourCutStudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourCutStudioView.swift; sourceTree = "<group>"; };
 		1178F8BB2A04E61900F5EC00 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		1178F8BF2A04F73900F5EC00 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		67C4116F2A04DD3B00AD1D41 /* MapLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLocation.swift; sourceTree = "<group>"; };
-		67C411732A04FF8D00AD1D41 /* CustomMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarkerView.swift; sourceTree = "<group>"; };
+		11F146692A0936E00095F2F4 /* PodongViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodongViewModel.swift; sourceTree = "<group>"; };
+		11F1466C2A0936F30095F2F4 /* PodongModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodongModel.swift; sourceTree = "<group>"; };
+		11F146702A0937180095F2F4 /* FilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		11F146722A0937180095F2F4 /* FourCutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourCutView.swift; sourceTree = "<group>"; };
+		11F146742A0937180095F2F4 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		11F146752A0937180095F2F4 /* MapView_2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView_2.swift; sourceTree = "<group>"; };
+		11F146762A0937180095F2F4 /* CoverButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverButton.swift; sourceTree = "<group>"; };
+		11F1467C2A093BFD0095F2F4 /* FrameExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameExtension.swift; sourceTree = "<group>"; };
+		11F1467E2A093C040095F2F4 /* JsonDecodeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonDecodeExtension.swift; sourceTree = "<group>"; };
+		11F146802A093D990095F2F4 /* spotdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = spotdata.json; sourceTree = "<group>"; };
+		11FEE6CC2A08E6FE00513041 /* CustomAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
+		11FEE6CE2A08E76600513041 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		67E301752A023ED500A46BF9 /* podong4cuts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = podong4cuts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67E301782A023ED500A46BF9 /* podong4cutsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = podong4cutsApp.swift; sourceTree = "<group>"; };
 		67E3017A2A023ED500A46BF9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -90,6 +110,7 @@
 		07F5E68D2A0240C200384D44 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				11F146802A093D990095F2F4 /* spotdata.json */,
 				67E3017C2A023ED700A46BF9 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -99,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				07F5E68F2A02411400384D44 /* Color+.swift */,
+				11F1467E2A093C040095F2F4 /* JsonDecodeExtension.swift */,
+				11F1467C2A093BFD0095F2F4 /* FrameExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -116,11 +139,12 @@
 		07F5E6922A02413E00384D44 /* Team1_Map */ = {
 			isa = PBXGroup;
 			children = (
+				11F1466E2A0937180095F2F4 /* View */,
+				11F1466B2A0936F30095F2F4 /* Model */,
+				11F146682A0936E00095F2F4 /* ViewModel */,
 				07F5E6932A02417200384D44 /* HomeView.swift */,
-				67C411732A04FF8D00AD1D41 /* CustomMarkerView.swift */,
-				67C4116F2A04DD3B00AD1D41 /* MapLocation.swift */,
-				1178F8BB2A04E61900F5EC00 /* MapView.swift */,
 				1178F8BF2A04F73900F5EC00 /* LocationManager.swift */,
+				11FEE6CC2A08E6FE00513041 /* CustomAnnotation.swift */,
 			);
 			path = Team1_Map;
 			sourceTree = "<group>";
@@ -139,6 +163,60 @@
 				07F5E69A2A0241CA00384D44 /* FourCutStudioView.swift */,
 			);
 			path = Team3_FCS;
+			sourceTree = "<group>";
+		};
+		11F146682A0936E00095F2F4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				11F146692A0936E00095F2F4 /* PodongViewModel.swift */,
+				11FEE6CE2A08E76600513041 /* MapViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		11F1466B2A0936F30095F2F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				11F1466C2A0936F30095F2F4 /* PodongModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		11F1466E2A0937180095F2F4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				11F1466F2A0937180095F2F4 /* FilterView */,
+				11F146712A0937180095F2F4 /* FourCutView */,
+				11F146732A0937180095F2F4 /* MapViewGroup */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		11F1466F2A0937180095F2F4 /* FilterView */ = {
+			isa = PBXGroup;
+			children = (
+				11F146702A0937180095F2F4 /* FilterView.swift */,
+			);
+			path = FilterView;
+			sourceTree = "<group>";
+		};
+		11F146712A0937180095F2F4 /* FourCutView */ = {
+			isa = PBXGroup;
+			children = (
+				11F146722A0937180095F2F4 /* FourCutView.swift */,
+			);
+			path = FourCutView;
+			sourceTree = "<group>";
+		};
+		11F146732A0937180095F2F4 /* MapViewGroup */ = {
+			isa = PBXGroup;
+			children = (
+				11F146742A0937180095F2F4 /* DetailView.swift */,
+				11F146752A0937180095F2F4 /* MapView_2.swift */,
+				11F146762A0937180095F2F4 /* CoverButton.swift */,
+				1178F8BB2A04E61900F5EC00 /* MapView.swift */,
+			);
+			path = MapViewGroup;
 			sourceTree = "<group>";
 		};
 		67E3016C2A023ED500A46BF9 = {
@@ -304,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67E301802A023ED700A46BF9 /* Preview Assets.xcassets in Resources */,
+				11F146812A093D990095F2F4 /* spotdata.json in Resources */,
 				67E3017D2A023ED700A46BF9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,16 +408,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11F146772A0937180095F2F4 /* FilterView.swift in Sources */,
+				11F1467A2A0937180095F2F4 /* MapView_2.swift in Sources */,
+				11F1467F2A093C040095F2F4 /* JsonDecodeExtension.swift in Sources */,
 				1178F8BC2A04E61900F5EC00 /* MapView.swift in Sources */,
+				11F1467B2A0937180095F2F4 /* CoverButton.swift in Sources */,
 				67E3017B2A023ED500A46BF9 /* ContentView.swift in Sources */,
+				11F146782A0937180095F2F4 /* FourCutView.swift in Sources */,
 				07F5E69B2A0241CA00384D44 /* FourCutStudioView.swift in Sources */,
 				07F5E6942A02417200384D44 /* HomeView.swift in Sources */,
+				11F1466D2A0936F30095F2F4 /* PodongModel.swift in Sources */,
 				1178F8C02A04F73900F5EC00 /* LocationManager.swift in Sources */,
-				67C411742A04FF8D00AD1D41 /* CustomMarkerView.swift in Sources */,
-				67C411702A04DD3B00AD1D41 /* MapLocation.swift in Sources */,
+				11FEE6CD2A08E6FE00513041 /* CustomAnnotation.swift in Sources */,
+				11F1467D2A093BFD0095F2F4 /* FrameExtension.swift in Sources */,
 				07F5E6902A02411400384D44 /* Color+.swift in Sources */,
 				07F5E6982A02419600384D44 /* CameraView.swift in Sources */,
 				67E301792A023ED500A46BF9 /* podong4cutsApp.swift in Sources */,
+				11FEE6CF2A08E76600513041 /* MapViewModel.swift in Sources */,
+				11F146792A0937180095F2F4 /* DetailView.swift in Sources */,
+				11F1466A2A0936E00095F2F4 /* PodongViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
