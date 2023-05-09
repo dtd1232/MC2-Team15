@@ -58,8 +58,9 @@ struct FourCutStudioView: View {
                                     
                                     Image(uiImage: image)
                                         .resizable()
+                                        .scaledToFill()
                                         .frame(width: photoWidth, height: photoheigth)
-                                        .aspectRatio(contentMode: .fill)
+                                        .clipped()
                                         .onTapGesture {
                                             toggleImageTapped(num: 1)
                                         }
@@ -103,8 +104,9 @@ struct FourCutStudioView: View {
                                     
                                     Image(uiImage: image)
                                         .resizable()
+                                        .scaledToFill()
                                         .frame(width: photoWidth, height: photoheigth)
-                                        .aspectRatio(contentMode: .fill)
+                                        .clipped()
                                         .onTapGesture {
                                             toggleImageTapped(num: 2)
                                         }
@@ -154,8 +156,9 @@ struct FourCutStudioView: View {
                                     
                                     Image(uiImage: image)
                                         .resizable()
+                                        .scaledToFill()
                                         .frame(width: photoWidth, height: photoheigth)
-                                        .aspectRatio(contentMode: .fill)
+                                        .clipped()
                                         .onTapGesture {
                                             toggleImageTapped(num: 3)
                                         }
@@ -199,8 +202,9 @@ struct FourCutStudioView: View {
                                     
                                     Image(uiImage: image)
                                         .resizable()
+                                        .scaledToFill()
                                         .frame(width: photoWidth, height: photoheigth)
-                                        .aspectRatio(contentMode: .fill)
+                                        .clipped()
                                         .onTapGesture {
                                             toggleImageTapped(num: 4)
                                         }
