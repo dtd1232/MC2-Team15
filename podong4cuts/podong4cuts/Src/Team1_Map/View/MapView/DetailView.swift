@@ -32,9 +32,9 @@ struct DetailView: View {
                         Image(systemName: VM.spotdata[number].isOpened ? "lock.open.fill" : "lock.fill")
                             .font(.title2)
                             .foregroundColor(
-                                VM.spotdata[number].isOpened ? .gray.opacity(0.2) : .gray.opacity(0.9)
+                                VM.spotdata[number].isOpened ? .gray.opacity(0.1) : .gray.opacity(0.9)
                             )
-                            .animation(.easeInOut(duration: 0.2), value: VM.spotdata[0].isOpened)
+                            .animation(.easeInOut(duration: 0.2), value: VM.spotdata[number].isOpened)
                         
                         
                         Spacer()

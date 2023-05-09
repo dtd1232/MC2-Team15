@@ -15,9 +15,16 @@
 		67E3017B2A023ED500A46BF9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E3017A2A023ED500A46BF9 /* ContentView.swift */; };
 		67E3017D2A023ED700A46BF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67E3017C2A023ED700A46BF9 /* Assets.xcassets */; };
 		67E301802A023ED700A46BF9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67E3017F2A023ED700A46BF9 /* Preview Assets.xcassets */; };
-		67E3018A2A023ED700A46BF9 /* podong4cutsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E301892A023ED700A46BF9 /* podong4cutsTests.swift */; };
-		67E301942A023ED700A46BF9 /* podong4cutsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E301932A023ED700A46BF9 /* podong4cutsUITests.swift */; };
-		67E301962A023ED700A46BF9 /* podong4cutsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E301952A023ED700A46BF9 /* podong4cutsUITestsLaunchTests.swift */; };
+		F3C1DD042A08EE5200396874 /* PodongModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C1DD032A08EE5200396874 /* PodongModel.swift */; };
+		F3C1DD062A08EE6900396874 /* PodongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C1DD052A08EE6900396874 /* PodongViewModel.swift */; };
+		F3C1DD0B2A08EEC900396874 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C1DD0A2A08EEC900396874 /* MapView.swift */; };
+		F3C1DD0D2A08EEE400396874 /* CoverButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C1DD0C2A08EEE400396874 /* CoverButton.swift */; };
+		F3C1DD0F2A08EEF800396874 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C1DD0E2A08EEF800396874 /* DetailView.swift */; };
+		F3C1DD112A08EF1400396874 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C1DD102A08EF1400396874 /* FilterView.swift */; };
+		F3C1DD132A08EF3100396874 /* FourCutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C1DD122A08EF3100396874 /* FourCutView.swift */; };
+		F3D672862A08E80700A262FE /* FrameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D672852A08E80700A262FE /* FrameExtension.swift */; };
+		F3D672882A08E86C00A262FE /* JsonDecodeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D672872A08E86C00A262FE /* JsonDecodeExtension.swift */; };
+		F3D6728A2A08E88900A262FE /* spotdata.json in Resources */ = {isa = PBXBuildFile; fileRef = F3D672892A08E88900A262FE /* spotdata.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,10 +55,17 @@
 		67E3017C2A023ED700A46BF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67E3017F2A023ED700A46BF9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		67E301852A023ED700A46BF9 /* podong4cutsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = podong4cutsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		67E301892A023ED700A46BF9 /* podong4cutsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = podong4cutsTests.swift; sourceTree = "<group>"; };
 		67E3018F2A023ED700A46BF9 /* podong4cutsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = podong4cutsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		67E301932A023ED700A46BF9 /* podong4cutsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = podong4cutsUITests.swift; sourceTree = "<group>"; };
-		67E301952A023ED700A46BF9 /* podong4cutsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = podong4cutsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F3C1DD032A08EE5200396874 /* PodongModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodongModel.swift; sourceTree = "<group>"; };
+		F3C1DD052A08EE6900396874 /* PodongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodongViewModel.swift; sourceTree = "<group>"; };
+		F3C1DD0A2A08EEC900396874 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		F3C1DD0C2A08EEE400396874 /* CoverButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverButton.swift; sourceTree = "<group>"; };
+		F3C1DD0E2A08EEF800396874 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		F3C1DD102A08EF1400396874 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		F3C1DD122A08EF3100396874 /* FourCutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourCutView.swift; sourceTree = "<group>"; };
+		F3D672852A08E80700A262FE /* FrameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameExtension.swift; sourceTree = "<group>"; };
+		F3D672872A08E86C00A262FE /* JsonDecodeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDecodeExtension.swift; sourceTree = "<group>"; };
+		F3D672892A08E88900A262FE /* spotdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = spotdata.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +96,7 @@
 		07F5E68D2A0240C200384D44 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F3D672892A08E88900A262FE /* spotdata.json */,
 				67E3017C2A023ED700A46BF9 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -91,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				07F5E68F2A02411400384D44 /* Color+.swift */,
+				F3D672852A08E80700A262FE /* FrameExtension.swift */,
+				F3D672872A08E86C00A262FE /* JsonDecodeExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -109,6 +126,9 @@
 			isa = PBXGroup;
 			children = (
 				07F5E6932A02417200384D44 /* HomeView.swift */,
+				F3C1DD002A08EE1900396874 /* Model */,
+				F3C1DD012A08EE2400396874 /* ViewModel */,
+				F3C1DD022A08EE2B00396874 /* View */,
 			);
 			path = Team1_Map;
 			sourceTree = "<group>";
@@ -133,8 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				67E301772A023ED500A46BF9 /* podong4cuts */,
-				67E301882A023ED700A46BF9 /* podong4cutsTests */,
-				67E301922A023ED700A46BF9 /* podong4cutsUITests */,
 				67E301762A023ED500A46BF9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -154,9 +172,9 @@
 			children = (
 				67E301782A023ED500A46BF9 /* podong4cutsApp.swift */,
 				67E3017A2A023ED500A46BF9 /* ContentView.swift */,
-				07F5E68D2A0240C200384D44 /* Resources */,
-				07F5E68E2A0240F800384D44 /* Extensions */,
 				07F5E6912A02413000384D44 /* Src */,
+				07F5E68E2A0240F800384D44 /* Extensions */,
+				07F5E68D2A0240C200384D44 /* Resources */,
 				67E3017E2A023ED700A46BF9 /* Preview Content */,
 			);
 			path = podong4cuts;
@@ -170,21 +188,56 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		67E301882A023ED700A46BF9 /* podong4cutsTests */ = {
+		F3C1DD002A08EE1900396874 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				67E301892A023ED700A46BF9 /* podong4cutsTests.swift */,
+				F3C1DD032A08EE5200396874 /* PodongModel.swift */,
 			);
-			path = podong4cutsTests;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		67E301922A023ED700A46BF9 /* podong4cutsUITests */ = {
+		F3C1DD012A08EE2400396874 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				67E301932A023ED700A46BF9 /* podong4cutsUITests.swift */,
-				67E301952A023ED700A46BF9 /* podong4cutsUITestsLaunchTests.swift */,
+				F3C1DD052A08EE6900396874 /* PodongViewModel.swift */,
 			);
-			path = podong4cutsUITests;
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F3C1DD022A08EE2B00396874 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F3C1DD072A08EE8600396874 /* MapView */,
+				F3C1DD082A08EE8C00396874 /* FilterView */,
+				F3C1DD092A08EEA400396874 /* FourCutView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F3C1DD072A08EE8600396874 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				F3C1DD0A2A08EEC900396874 /* MapView.swift */,
+				F3C1DD0C2A08EEE400396874 /* CoverButton.swift */,
+				F3C1DD0E2A08EEF800396874 /* DetailView.swift */,
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
+		F3C1DD082A08EE8C00396874 /* FilterView */ = {
+			isa = PBXGroup;
+			children = (
+				F3C1DD102A08EF1400396874 /* FilterView.swift */,
+			);
+			path = FilterView;
+			sourceTree = "<group>";
+		};
+		F3C1DD092A08EEA400396874 /* FourCutView */ = {
+			isa = PBXGroup;
+			children = (
+				F3C1DD122A08EF3100396874 /* FourCutView.swift */,
+			);
+			path = FourCutView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67E301802A023ED700A46BF9 /* Preview Assets.xcassets in Resources */,
+				F3D6728A2A08E88900A262FE /* spotdata.json in Resources */,
 				67E3017D2A023ED700A46BF9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,12 +371,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3C1DD112A08EF1400396874 /* FilterView.swift in Sources */,
 				67E3017B2A023ED500A46BF9 /* ContentView.swift in Sources */,
+				F3C1DD042A08EE5200396874 /* PodongModel.swift in Sources */,
 				07F5E69B2A0241CA00384D44 /* FourCutStudioView.swift in Sources */,
+				F3C1DD0B2A08EEC900396874 /* MapView.swift in Sources */,
+				F3D672862A08E80700A262FE /* FrameExtension.swift in Sources */,
 				07F5E6942A02417200384D44 /* HomeView.swift in Sources */,
 				07F5E6902A02411400384D44 /* Color+.swift in Sources */,
+				F3C1DD0F2A08EEF800396874 /* DetailView.swift in Sources */,
+				F3C1DD0D2A08EEE400396874 /* CoverButton.swift in Sources */,
 				07F5E6982A02419600384D44 /* CameraView.swift in Sources */,
 				67E301792A023ED500A46BF9 /* podong4cutsApp.swift in Sources */,
+				F3C1DD132A08EF3100396874 /* FourCutView.swift in Sources */,
+				F3D672882A08E86C00A262FE /* JsonDecodeExtension.swift in Sources */,
+				F3C1DD062A08EE6900396874 /* PodongViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,7 +393,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67E3018A2A023ED700A46BF9 /* podong4cutsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,8 +400,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67E301942A023ED700A46BF9 /* podong4cutsUITests.swift in Sources */,
-				67E301962A023ED700A46BF9 /* podong4cutsUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,7 +469,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -463,7 +522,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -481,7 +539,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"podong4cuts/Preview Content\"";
-				DEVELOPMENT_TEAM = 5BC63NF7HR;
+				DEVELOPMENT_TEAM = ADXSYH5NDX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -494,7 +552,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mc2.team15.podong4cuts;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mc2.team14.podong4cuts.Goopy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -510,7 +568,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"podong4cuts/Preview Content\"";
-				DEVELOPMENT_TEAM = 5BC63NF7HR;
+				DEVELOPMENT_TEAM = ADXSYH5NDX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -523,7 +581,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mc2.team15.podong4cuts;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mc2.team14.podong4cuts.Goopy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
