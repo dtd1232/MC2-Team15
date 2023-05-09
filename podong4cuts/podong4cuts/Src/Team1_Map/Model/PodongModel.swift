@@ -30,7 +30,9 @@ struct AppData: Identifiable, Codable, Hashable {
         location: "스페이스워크 주소",
         gallary: ["spacewalk-1", "spacewalk-2", "spacewalk-3"],
         cover : "cover-spacewalk",
-        isOpened: false
+        isOpened: false,
+        latitude: 36.06149,
+        longitude: 129.38306
     )//: Sample
     
 }//: AppData
