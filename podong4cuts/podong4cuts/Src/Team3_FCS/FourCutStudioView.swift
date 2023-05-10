@@ -271,6 +271,16 @@ struct FourCutStudioView: View {
                 
             }
             .padding()
+            .onTapGesture {
+                
+                if let image = createCompositeImage() {
+                    
+                    let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+                    UIApplication.shared.windows.first?.rootViewController?.present(activityViewController, animated: true)
+                    
+                }
+
+            }
             
             Spacer()
             
@@ -296,21 +306,24 @@ struct FourCutStudioView: View {
     }
     
     private func createCompositeImage() -> UIImage? {
-        guard let image1 = image1, let image2 = image2, let image3 = image3, let image4 = image4 else {
-            return nil
-        }
+//        guard let image1 = image1, let image2 = image2, let image3 = image3, let image4 = image4 else {
+//            return nil
+//        }
         
-        let renderer = UIGraphicsImageRenderer(size: CGSize(width: 600, height: 600))
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width: 1490, height: 2219))
         let image = renderer.image { ctx in
-            let rect1 = CGRect(x: 0, y: 0, width: 300, height: 300)
-            let rect2 = CGRect(x: 300, y: 0, width: 300, height: 150)
-            let rect3 = CGRect(x: 300, y: 150, width: 300, height: 150)
-            let rect4 = CGRect(x: 0, y: 300, width: 300, height: 300)
+            let bgFrame = CGRect(x: 0, y: 0, width: 1490, height: 2219)
+            UIImage(named: "phoDong4CutFrame")?.draw(in: bgFrame)
             
-            image1.draw(in: rect1)
-            image2.draw(in: rect2)
-            image3.draw(in: rect3)
-            image4.draw(in: rect4)
+            let rect1 = CGRect(x: 65, y: 325, width: 660, height: 880)
+            let rect2 = CGRect(x: 65, y: 1245, width: 660, height: 880)
+            let rect3 = CGRect(x: 765, y: 325, width: 660, height: 880)
+            let rect4 = CGRect(x: 765, y: 1245, width: 660, height: 880)
+            
+//            image1.draw(in: rect1)
+//            image2.draw(in: rect2)
+//            image3.draw(in: rect3)
+//            image4.draw(in: rect4)
         }
         
         return image
