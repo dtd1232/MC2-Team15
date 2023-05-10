@@ -40,7 +40,7 @@ struct FourCutStudioView: View {
                 
                 ZStack{
                     
-                    Image("test_4cutFrame")
+                    Image("podong4cutFrame")
                         .resizable()
                         .scaledToFill()
                     
@@ -273,7 +273,7 @@ struct FourCutStudioView: View {
             .padding()
             .onTapGesture {
                 
-                if let image = createCompositeImage() {
+                if let image = createFourCutImage() {
                     
                     let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
                     UIApplication.shared.windows.first?.rootViewController?.present(activityViewController, animated: true)
@@ -302,31 +302,93 @@ struct FourCutStudioView: View {
                 
                 self.showImagePicker = false
             }
-        }
+        } 
     }
     
-    private func createCompositeImage() -> UIImage? {
-//        guard let image1 = image1, let image2 = image2, let image3 = image3, let image4 = image4 else {
-//            return nil
-//        }
+    private func createFourCutImage() -> UIImage? {
+        guard let image1 = image1, let image2 = image2, let image3 = image3, let image4 = image4 else {
+            return nil
+        }
+        
+        let aspectRatio: CGFloat = 3.0 / 4.0
+        let size = CGSize(width: 627, height: 836)
         
         let renderer = UIGraphicsImageRenderer(size: CGSize(width: 1490, height: 2219))
         let image = renderer.image { ctx in
             let bgFrame = CGRect(x: 0, y: 0, width: 1490, height: 2219)
-            UIImage(named: "phoDong4CutFrame")?.draw(in: bgFrame)
+            UIImage(named: "podong4cutFrame")?.draw(in: bgFrame)
             
-            let rect1 = CGRect(x: 65, y: 325, width: 660, height: 880)
-            let rect2 = CGRect(x: 65, y: 1245, width: 660, height: 880)
-            let rect3 = CGRect(x: 765, y: 325, width: 660, height: 880)
-            let rect4 = CGRect(x: 765, y: 1245, width: 660, height: 880)
+            let rect1 = CGRect(x: 103, y: 375, width: 627, height: 836)
+            let rect2 = CGRect(x: 103, y: 1241, width: 627, height: 836)
+            let rect3 = CGRect(x: 760, y: 375, width: 627, height: 836)
+            let rect4 = CGRect(x: 760, y: 1241, width: 627, height: 836)
             
-//            image1.draw(in: rect1)
-//            image2.draw(in: rect2)
-//            image3.draw(in: rect3)
-//            image4.draw(in: rect4)
+            
+            let croppedImage1 = createCroppedImage(originalImage: image1, cropSize: size)
+            let croppedImage2 = createCroppedImage(originalImage: image2, cropSize: size)
+            let croppedImage3 = createCroppedImage(originalImage: image3, cropSize: size)
+            let croppedImage4 = createCroppedImage(originalImage: image4, cropSize: size)
+            
+            
+            croppedImage1?.draw(in: rect1)
+            croppedImage2?.draw(in: rect2)
+            croppedImage3?.draw(in: rect3)
+            croppedImage4?.draw(in: rect4)
+            
         }
         
         return image
+    }
+    
+    private func createCroppedImage(originalImage: UIImage, cropSize: CGSize) -> UIImage?{
+        
+        
+        let renderer = UIGraphicsImageRenderer(size: cropSize)
+        
+        let image = renderer.image { ctx in
+            
+            let cropRect = createCropRect(imageSize: originalImage.size)
+            
+            //CGImage 변환 목적: UIImage에는 없는 Cropping 메소드 사용하기 위함
+            guard let originalCGImageCropped = originalImage.cgImage?.cropping(to: cropRect) else{
+                return
+            }
+            
+            let croppedImage = UIImage(cgImage: originalCGImageCropped)
+            
+            croppedImage.draw(in: CGRect(origin: .zero, size: cropSize))
+            
+        }
+        
+        return image
+        
+    }
+    
+    private func createCropRect(imageSize: CGSize) -> CGRect{
+        //image의 크기를 기준으로 AspectFill을 만족하는 CropRec 반환
+        
+        let aspectRatio: CGFloat = 3.0 / 4.0
+        var cropRect: CGRect
+        
+        if imageSize.width / imageSize.height > aspectRatio {
+            //가로가 더 길다?
+            //세로를 기준으로 가로 자르기~
+            let heigth = imageSize.height
+            let width = heigth * aspectRatio
+            let x = (imageSize.width - width) / 2
+            cropRect = CGRect(x: x, y: 0, width: width, height: heigth)
+            
+        }else{
+            //세로가 더 길다?
+            //가로를 기준으로 세로 자르기~
+            let width = imageSize.width
+            let heigth = width / aspectRatio
+            let y = (imageSize.height - heigth) / 2
+            cropRect = CGRect(x: 0, y: y, width: width, height: heigth)
+            
+        }
+        
+        return cropRect
     }
     
     private func toggleImageTapped(num: Int) {
