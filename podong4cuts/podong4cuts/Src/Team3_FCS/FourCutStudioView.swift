@@ -33,23 +33,24 @@ struct FourCutStudioView: View {
             
             //MARK: - 네컷 프레임
             
-            GeometryReader { geo in
+            Group{
                 
-                let photoWidth: CGFloat = (geo.size.width - 3*spacing)/2
-                let photoheigth: CGFloat = (geo.size.height - 3*spacing)/2
+                let photoWidth: CGFloat = 147.28
+                let photoheigth: CGFloat = 196.38
+                let horiMargin: CGFloat = 24.19
+                let topMargin: CGFloat = 58
+                let spacing: CGFloat = 7.05
                 
                 ZStack{
                     
                     Image("podong4cutFrame")
                         .resizable()
+                        .frame(width: 350, height: 521.2)
                         .scaledToFill()
                     
-                    HStack{
-                        Spacer()
+                    HStack(spacing: spacing){
                         //왼쪽
-                        VStack{
-                            
-                            Spacer()
+                        VStack(spacing: spacing){
                             
                             //MARK: - 1번 사진 영역
                             ZStack{
@@ -95,7 +96,6 @@ struct FourCutStudioView: View {
                             }
                             .frame(width: photoWidth, height: photoheigth)
                             
-                            Spacer()
                             
                             //MARK: - 2번 사진 영역
                             ZStack{
@@ -141,13 +141,9 @@ struct FourCutStudioView: View {
                             }
                             .frame(width: photoWidth, height: photoheigth)
                             
-                            Spacer()
                         }
                         
-                        Spacer()
-                        
-                        VStack{
-                            Spacer()
+                        VStack(spacing: spacing){
                             
                             //MARK: - 3번 사진
                             ZStack{
@@ -193,7 +189,6 @@ struct FourCutStudioView: View {
                             }
                             .frame(width: photoWidth, height: photoheigth)
                             
-                            Spacer()
                             
                             //MARK: - 4번 사진
                             ZStack{
@@ -239,16 +234,16 @@ struct FourCutStudioView: View {
                             }
                             .frame(width: photoWidth, height: photoheigth)
                             
-                            Spacer()
                         }
-                        Spacer()
                         
                     }
+                    .padding(.top, topMargin)
+                    .frame(height: 521.2)
                     
                     
                 }
+                .frame(width: 350, height: 521.2)
             }
-            .frame(width: 300, height: 400)
             
             Spacer()
             
