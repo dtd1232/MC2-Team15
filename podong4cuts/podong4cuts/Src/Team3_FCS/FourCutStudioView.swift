@@ -37,7 +37,6 @@ struct FourCutStudioView: View {
                 
                 let photoWidth: CGFloat = 147.28
                 let photoheigth: CGFloat = 196.38
-                let horiMargin: CGFloat = 24.19
                 let topMargin: CGFloat = 58
                 let spacing: CGFloat = 7.05
                 
@@ -305,7 +304,6 @@ struct FourCutStudioView: View {
             return nil
         }
         
-        let aspectRatio: CGFloat = 3.0 / 4.0
         let size = CGSize(width: 627, height: 836)
         
         let renderer = UIGraphicsImageRenderer(size: CGSize(width: 1490, height: 2219))
