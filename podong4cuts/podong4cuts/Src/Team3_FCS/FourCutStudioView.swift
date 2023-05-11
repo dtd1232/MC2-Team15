@@ -350,7 +350,7 @@ struct FourCutStudioView: View {
             let cropRect = createCropRect(imageSize: originalImage.size)
             
             //CGImage 변환 목적: UIImage에는 없는 Cropping 메소드 사용하기 위함
-            guard let originalCGImageCropped = originalImage.cgImage?.cropping(to: cropRect) else{
+            guard let originalCGImageCropped = originalImage.fixOrientation().cgImage?.cropping(to: cropRect) else{
                 return
             }
             
@@ -475,3 +475,68 @@ struct FourCutStudioView_Previews: PreviewProvider {
         FourCutStudioView()
     }
 }
+
+extension UIImage {
+    func fixOrientation() -> UIImage {
+        if self.imageOrientation == .up {
+            return self
+        }
+
+        var transform = CGAffineTransform.identity
+
+        switch self.imageOrientation {
+        case .down, .downMirrored:
+            transform = transform.translatedBy(x: self.size.width, y: self.size.height)
+            transform = transform.rotated(by: CGFloat.pi)
+        case .left, .leftMirrored:
+            transform = transform.translatedBy(x: self.size.width, y: 0)
+            transform = transform.rotated(by: CGFloat.pi / 2)
+        case .right, .rightMirrored:
+            transform = transform.translatedBy(x: 0, y: self.size.height)
+            transform = transform.rotated(by: -CGFloat.pi / 2)
+        default:
+            break
+        }
+
+        switch self.imageOrientation {
+        case .upMirrored, .downMirrored:
+            transform = transform.translatedBy(x: self.size.width, y: 0)
+            transform = transform.scaledBy(x: -1, y: 1)
+        case .leftMirrored, .rightMirrored:
+            transform = transform.translatedBy(x: self.size.height, y: 0)
+            transform = transform.scaledBy(x: -1, y: 1)
+        default:
+            break
+        }
+
+        if let cgImage = self.cgImage,
+           let colorSpace = cgImage.colorSpace,
+           let context = CGContext(
+               data: nil,
+               width: Int(self.size.width),
+               height: Int(self.size.height),
+               bitsPerComponent: cgImage.bitsPerComponent,
+               bytesPerRow: 0,
+               space: colorSpace,
+               bitmapInfo: cgImage.bitmapInfo.rawValue
+           ) {
+            context.concatenate(transform)
+
+            switch self.imageOrientation {
+            case .left, .leftMirrored, .right, .rightMirrored:
+                context.draw(cgImage, in: CGRect(x: 0, y: 0, width: self.size.height, height: self.size.width))
+            default:
+                context.draw(cgImage, in: CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height))
+            }
+
+            if let newCGImage = context.makeImage() {
+                let newImage = UIImage(cgImage: newCGImage)
+                return newImage
+            }
+        }
+
+        return self
+    }
+}
+
+
