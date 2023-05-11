@@ -13,55 +13,9 @@ struct CustomCoverButton: View {
     @ObservedObject var VM: PodongViewModel
     var selectedNumber : Int = 0
     
-    
     var body: some View {
             
-        
-            
-        if (VM.spotdata[selectedNumber].isDetailSheetPresented){
-              
-                
-            VStack(spacing: 0){
-                ZStack{
-                    
-                    Circle()
-                        .foregroundColor(.white)
-                        .frame(width: 75)
-                        .shadow(color: Color.gray.opacity(0.7),radius: 5, y:6)
-                    
-                    Circle()
-                        .fill(
-                            LinearGradient(
-                                gradient: Gradient(colors: [Color("MapPinPink"),Color("MapPinYellow")]
-                                ),
-                                startPoint: .top,
-                                endPoint: .bottom)
-                        )
-                        .frame(width: 68)
-                    
-                    Image(VM.spotdata[selectedNumber].cover)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 60)
-                        .clipShape(RoundedRectangle(cornerRadius: 60))
-                    
-                    
-                }//: ZStack
-                Image(systemName: "triangle.fill")
-                    .resizable()
-                    .scaledToFill()
-                    .foregroundColor(.white)
-                    .rotationEffect(Angle(degrees: 180))
-                    .frame(width: 11, height: 11)
-                    .offset(y: -3)
-                
-                Text(VM.spotdata[selectedNumber].name)
-                    .foregroundColor(.gray)
-                    .fontWeight(.bold)
-                    .font(.subheadline)
-            }//: VStack
-                
-        } else {
+
                 
                 
                 VStack(spacing: 0){
@@ -92,9 +46,6 @@ struct CustomCoverButton: View {
                         .font(.subheadline)
                 }//: VStack
         
-                
-                
-            }//: 조건문
         
     }//】 Body
 }

@@ -24,6 +24,8 @@ struct MapView: View {
     
     //goopy's code
     @ObservedObject var VM: PodongViewModel
+    @State private var selectedSpot: AppData? = nil
+    @State var isDetailSheetPresented : Bool = false
    
 
     
@@ -45,8 +47,8 @@ struct MapView: View {
                                 MapAnnotation(coordinate: locations.coordinate) {
                                     CustomCoverButton(VM: self.VM, selectedNumber: locations.selectedNumber)
                                         .onTapGesture {
-                                            VM.selectedSpot = VM.spotdata[locations.selectedNumber]
-                                            VM.spotdata[locations.selectedNumber].isDetailSheetPresented = true
+                                            selectedSpot = VM.spotdata[locations.selectedNumber]
+                                            isDetailSheetPresented = true
                                         }//: onTapDesture
                                 }
                             }
@@ -103,13 +105,9 @@ struct MapView: View {
                     }//】 HStack
                 }//】 ZStack
         }//】 Navigation
-        .sheet(isPresented: $VM.spotdata[VM.selectedSpot!.number].isDetailSheetPresented) {
-            if VM.selectedSpot != nil {
-                DetailView(VM: PodongViewModel())
-                    .environmentObject(PodongViewModel())
-                    .presentationDetents([.medium, .large])
-            }
-        }//】 Sheet
+        .sheet(item: $selectedSpot, onDismiss: nil) { data in
+            DetailView(VM: self.VM, selectedNumber: data.number)
+        }
 }//: Struct
         
     

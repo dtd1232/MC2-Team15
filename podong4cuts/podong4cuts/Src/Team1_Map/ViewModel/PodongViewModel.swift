@@ -13,7 +13,7 @@ class PodongViewModel: ObservableObject {
     // Json 파일을 가져다 SwiftUI에서 사용할 수 있도록 []안에 저장
     @Published var spotdata: [AppData] = Bundle.main.decode("spotdata.json")
     
-    @Published var selectedSpot: AppData? = nil
+//    @Published var selectedSpot: AppData? = nil
     
 
     
