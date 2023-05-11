@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct podong4cutsApp: App {
+    
+    // property
+    @StateObject var VM: PodongViewModel = PodongViewModel()
+    
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView(VM: PodongViewModel())
         }
     }
 }

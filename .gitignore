@@ -131,4 +131,6 @@ iOSInjectionProject/
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
 
+test_sean.swift
+
 # End of https://www.toptal.com/developers/gitignore/api/xcode,swift,macos
