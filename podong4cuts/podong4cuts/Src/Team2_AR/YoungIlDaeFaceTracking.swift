@@ -21,9 +21,5 @@ struct YoungIlDaeFaceTracking: UIViewControllerRepresentable {
         
     }
     
-    func takeSnapShot() {
-        vc.takeSnapShot()
-    }
-    
 }
 

@@ -76,6 +76,25 @@ class YoungIlDaeFaceTrackingViewController: UIViewController {
         }
     }
     
+    func saveSnapShot(snapShot: UIImage) {
+        UIImageWriteToSavedPhotosAlbum(snapShot, nil, nil, nil)
+    }
+    
+    
+    func cropImage(position: CGPoint, width: CGFloat, height: CGFloat, inputImage: UIImage)-> UIImage? {
+        let cropZone = CGRect(x: position.x, y: position.y, width: width, height: height)
+        
+        guard let cutImageRef: CGImage = inputImage.cgImage?.cropping(to: cropZone) else { return nil}
+        return UIImage(cgImage: cutImageRef)
+//        return UIImage(cgImage: cutImageRef, scale: inputImage.imageRendererFormat.scale, orientation: inputImage.imageOrientation)
+    }
+    
+    func reRun() {
+        let config = ARWorldTrackingConfiguration()
+        arView.session.run(config)
+    }
+
+    
 }
 
 extension YoungIlDaeFaceTrackingViewController: ARSessionDelegate {
