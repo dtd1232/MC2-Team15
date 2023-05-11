@@ -14,13 +14,13 @@ class CoverButton: NSObject, MKAnnotation, Identifiable {
     //property
     @ObservedObject var VM: PodongViewModel
     var coordinate: CLLocationCoordinate2D
-    var number: Int
+    var selectedNumber: Int
     
-    init(VM: PodongViewModel, coordinate: CLLocationCoordinate2D, number: Int) {
+    init(VM: PodongViewModel, coordinate: CLLocationCoordinate2D, selectedNumber: Int) {
         
         self.VM = VM
         self.coordinate = coordinate
-        self.number = number
+        self.selectedNumber = selectedNumber
         
     }
     

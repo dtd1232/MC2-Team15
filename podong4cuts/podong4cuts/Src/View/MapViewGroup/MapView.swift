@@ -24,7 +24,7 @@ struct MapView: View {
     
     //goopy's code
     @ObservedObject var VM: PodongViewModel
-
+   
 
     
     
@@ -43,14 +43,12 @@ struct MapView: View {
                             userTrackingMode: $tracking,
                             annotationItems: annotations) { locations in
                                 MapAnnotation(coordinate: locations.coordinate) {
-                                        CustomCoverButton(VM: self.VM)
+                                    CustomCoverButton(VM: self.VM, selectedNumber: locations.selectedNumber)
                                         .onTapGesture {
-                                            VM.selectedSpot = VM.spotdata[locations.number]
-                                            VM.spotdata[VM.selectedNumber].isDetailSheetPresented = true
+                                            VM.selectedSpot = VM.spotdata[locations.selectedNumber]
+                                            VM.spotdata[locations.selectedNumber].isDetailSheetPresented = true
                                         }//: onTapDesture
-                                    
                                 }
-                            
                             }
                             .onAppear {
                                 addAnnotations()
@@ -105,13 +103,11 @@ struct MapView: View {
                     }//】 HStack
                 }//】 ZStack
         }//】 Navigation
-        .sheet(isPresented: $VM.spotdata[VM.selectedNumber].isDetailSheetPresented) {
-            if let spot = VM.selectedSpot {
-                DetailView()
-                    .environmentObject(
-                        PodongViewModel()
-                    )
-                .presentationDetents([.medium, .large])
+        .sheet(isPresented: $VM.spotdata[VM.selectedSpot!.number].isDetailSheetPresented) {
+            if VM.selectedSpot != nil {
+                DetailView(VM: PodongViewModel())
+                    .environmentObject(PodongViewModel())
+                    .presentationDetents([.medium, .large])
             }
         }//】 Sheet
 }//: Struct
@@ -134,43 +130,42 @@ struct MapView: View {
                     VM: self.VM,
                     coordinate: CLLocationCoordinate2D(
                                     latitude: self.VM.spotdata[0].latitude,
-                                    longitude: self.VM.spotdata[0].longitude), number: 0),
+                                    longitude: self.VM.spotdata[0].longitude), selectedNumber: 0),
                 
                 //[1] 토마틸로
                 CoverButton(
                     VM: self.VM,
                     coordinate: CLLocationCoordinate2D(
                                     latitude: self.VM.spotdata[1].latitude,
-                                    longitude: self.VM.spotdata[1].longitude), number: 1),
+                                    longitude: self.VM.spotdata[1].longitude), selectedNumber: 1),
                 
                 //[2] 오브레맨
                 CoverButton(
                     VM: self.VM,
                     coordinate: CLLocationCoordinate2D(
                                     latitude: self.VM.spotdata[2].latitude,
-                                    longitude: self.VM.spotdata[2].longitude), number: 2),
+                                    longitude: self.VM.spotdata[2].longitude), selectedNumber: 2),
                 
                 //[3] 영일교
                 CoverButton(
                     VM: self.VM,
                     coordinate: CLLocationCoordinate2D(
                                     latitude: self.VM.spotdata[3].latitude,
-                                    longitude: self.VM.spotdata[3].longitude), number: 3),
+                                    longitude: self.VM.spotdata[3].longitude), selectedNumber: 3),
                 
                 //[4] 글로벌 신화
                 CoverButton(
                     VM: self.VM,
                     coordinate: CLLocationCoordinate2D(
                                     latitude: self.VM.spotdata[4].latitude,
-                                    longitude: self.VM.spotdata[4].longitude), number: 4),
+                                    longitude: self.VM.spotdata[4].longitude), selectedNumber: 4),
                 
                 //[5] 고래꼬리
                 CoverButton(
                     VM: self.VM,
                     coordinate: CLLocationCoordinate2D(
                                     latitude: self.VM.spotdata[5].latitude,
-                                    longitude: self.VM.spotdata[5].longitude), number: 5
-                )
+                                    longitude: self.VM.spotdata[5].longitude), selectedNumber: 5)
                 
             ]
             

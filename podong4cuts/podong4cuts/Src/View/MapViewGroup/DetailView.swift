@@ -11,8 +11,10 @@ import SwiftUI
 struct DetailView: View {
     
     //property
-    @EnvironmentObject var VM: PodongViewModel
+    @ObservedObject var VM: PodongViewModel
     
+    
+    var selectedNumber: Int = 0
    
     
     var body: some View {
@@ -23,24 +25,24 @@ struct DetailView: View {
                 //이름& 해시태그
                 VStack{
                     HStack{
-                        Text(VM.spotdata[VM.selectedNumber].name)
+                        Text(VM.spotdata[selectedNumber].name)
                             .font(.title)
                             .foregroundColor(.black)
                             .fontWeight(.heavy)
                             .padding(.vertical, 5)
                         
-                        Image(systemName: VM.spotdata[VM.selectedNumber].isOpened ? "lock.open.fill" : "lock.fill")
+                        Image(systemName: VM.spotdata[selectedNumber].isOpened ? "lock.open.fill" : "lock.fill")
                             .font(.title2)
                             .foregroundColor(
-                                VM.spotdata[VM.selectedNumber].isOpened ? .gray.opacity(0.1) : .gray.opacity(0.9)
+                                VM.spotdata[selectedNumber].isOpened ? .gray.opacity(0.1) : .gray.opacity(0.9)
                             )
-                            .animation(.easeInOut(duration: 0.2), value: VM.spotdata[VM.selectedNumber].isOpened)
+                            .animation(.easeInOut(duration: 0.2), value: VM.spotdata[selectedNumber].isOpened)
                         
                         
                         Spacer()
                         
                     }//】 HStack
-                    Text(VM.spotdata[VM.selectedNumber].hashtag)
+                    Text(VM.spotdata[selectedNumber].hashtag)
                         .font(.headline)
                         .foregroundColor(.gray.opacity(0.8))
                         .hLeading()
@@ -72,7 +74,7 @@ struct DetailView: View {
                     VStack(spacing: 5){
                         //1. 사진
                         TabView{
-                            ForEach(VM.spotdata[VM.selectedNumber].gallary, id:\.self){index in
+                            ForEach(VM.spotdata[selectedNumber].gallary, id:\.self){index in
                                 Image(index)
                                     .resizable()
                                     .scaledToFit()
@@ -89,7 +91,7 @@ struct DetailView: View {
                             Text("[ 포동 후기 ]")
                                 .font(.title3)
                                 .fontWeight(.bold)
-                            Text(VM.spotdata[VM.selectedNumber].postScript)
+                            Text(VM.spotdata[selectedNumber].postScript)
                             
                         }//: VStack
                         .padding()
@@ -107,7 +109,7 @@ struct DetailView: View {
                                     .font(.title3)
                                     .fontWeight(.bold)
                                 ZStack{
-                                    Text(VM.spotdata[VM.selectedNumber].location)
+                                    Text(VM.spotdata[selectedNumber].location)
                                         .hCenter()
                                     
                                 }//: ZStack
@@ -139,7 +141,7 @@ struct DetailView: View {
                 .shadow(color: Color.gray.opacity(0.3), radius: 10, y: 3)
                 
                 Button {
-                    VM.spotdata[VM.selectedNumber].isOpened = true
+                    VM.spotdata[selectedNumber].isOpened = true
                 } label: {
                     RoundedRectangle(cornerRadius: 50)
                         .frame(width: 330, height: 50)
@@ -167,7 +169,7 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView()
-            .environmentObject(PodongViewModel())
+        DetailView(VM: PodongViewModel(), selectedNumber: 0)
+           
     }
 }

@@ -15,7 +15,7 @@ class PodongViewModel: ObservableObject {
     
     @Published var selectedSpot: AppData? = nil
     
-    @Published var selectedNumber : Int = 0
+
     
     
 //    init(spotdata: [AppData], selectedSpot: AppData? = nil, selectedNumber: Int) {

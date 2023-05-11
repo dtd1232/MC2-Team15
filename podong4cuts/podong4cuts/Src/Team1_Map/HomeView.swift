@@ -12,8 +12,8 @@ import SwiftUI
 struct HomeView: View {
     
     // property
-    @ObservedObject var VM: PodongViewModel
-
+    @StateObject var VM: PodongViewModel = PodongViewModel()
+    var selectedNumber : Int = 0
     
     var body: some View {
 
@@ -45,7 +45,7 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(VM: PodongViewModel())
+        HomeView()
     }
 }
 
