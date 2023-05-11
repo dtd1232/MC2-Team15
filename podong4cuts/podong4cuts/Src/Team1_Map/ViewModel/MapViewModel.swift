@@ -38,6 +38,7 @@ struct MapViewModel: UIViewRepresentable {
         uiView.setRegion(region, animated: true)
         uiView.removeAnnotations(uiView.annotations)
         uiView.addAnnotations(annotations)
+        //구피 테스트 야미~
 //        showAnnotations 메서드: 지도에 설정한 핀을 한눈에 볼 수 있는 위치로 카메라 이동
 //        uiView.showAnnotations(annotations, animated: false)
     }
