@@ -26,7 +26,7 @@ struct CameraFrameView: View {
     @State var tempSnapShot: UIImage? = nil
     @State var thumbnail: UIImage? = nil
     
-    @State var arViewContainer = YoungIlDaeFaceTracking()
+    @State var arViewContainer = TempARViewContainer()
     
     var body: some View {
         ZStack {

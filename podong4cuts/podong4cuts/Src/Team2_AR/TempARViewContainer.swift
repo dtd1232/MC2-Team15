@@ -18,6 +18,7 @@ struct TempARViewContainer: UIViewRepresentable {
     
     init() {
         arView = ARView(frame: .zero)
+        
     }
     
     func makeUIView(context: Context) -> ARView {
@@ -29,6 +30,9 @@ struct TempARViewContainer: UIViewRepresentable {
         
         // Add the box anchor to the scene
         arView.scene.anchors.append(boxAnchor)
+        
+        let configuration = ARWorldTrackingConfiguration()
+        arView.session.run(configuration)
         
         return arView
     }
@@ -58,4 +62,13 @@ struct TempARViewContainer: UIViewRepresentable {
         return UIImage(cgImage: cutImageRef, scale: inputImage.imageRendererFormat.scale, orientation: inputImage.imageOrientation)
     }
     
+    func saveSnapShot(snapShot: UIImage) {
+        UIImageWriteToSavedPhotosAlbum(snapShot, nil, nil, nil)
+    }
+    
+    
+    func reRun() {
+        let config = ARWorldTrackingConfiguration()
+        arView.session.run(config)
+    }
 }

@@ -10,7 +10,7 @@ import PhotosUI
 
 struct PhotoLibraryView: View {
     @Binding var showPhotoLibrary: Bool
-    @Binding var arViewContainer: ARViewContainer
+    @Binding var arViewContainer: TempARViewContainer
     
     var columns: [GridItem] {
         return Array(repeating: .init(.flexible()), count: 3)
