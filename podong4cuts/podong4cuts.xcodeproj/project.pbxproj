@@ -32,6 +32,7 @@
 		67E3018A2A023ED700A46BF9 /* podong4cutsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E301892A023ED700A46BF9 /* podong4cutsTests.swift */; };
 		67E301942A023ED700A46BF9 /* podong4cutsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E301932A023ED700A46BF9 /* podong4cutsUITests.swift */; };
 		67E301962A023ED700A46BF9 /* podong4cutsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E301952A023ED700A46BF9 /* podong4cutsUITestsLaunchTests.swift */; };
+		F3B215EC2A0CD53A008ACE04 /* CustomCoverButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B215EB2A0CD53A008ACE04 /* CustomCoverButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		67E3018F2A023ED700A46BF9 /* podong4cutsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = podong4cutsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67E301932A023ED700A46BF9 /* podong4cutsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = podong4cutsUITests.swift; sourceTree = "<group>"; };
 		67E301952A023ED700A46BF9 /* podong4cutsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = podong4cutsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F3B215EB2A0CD53A008ACE04 /* CustomCoverButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCoverButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 				11F146752A0937180095F2F4 /* MapView_2.swift */,
 				11F146762A0937180095F2F4 /* CoverButton.swift */,
 				1178F8BB2A04E61900F5EC00 /* MapView.swift */,
+				F3B215EB2A0CD53A008ACE04 /* CustomCoverButton.swift */,
 			);
 			path = MapViewGroup;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3B215EC2A0CD53A008ACE04 /* CustomCoverButton.swift in Sources */,
 				11F146772A0937180095F2F4 /* FilterView.swift in Sources */,
 				11F1467A2A0937180095F2F4 /* MapView_2.swift in Sources */,
 				11F1467F2A093C040095F2F4 /* JsonDecodeExtension.swift in Sources */,
@@ -585,7 +589,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"podong4cuts/Preview Content\"";
-				DEVELOPMENT_TEAM = 5BC63NF7HR;
+				DEVELOPMENT_TEAM = ADXSYH5NDX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "\"지도 권한 필요\"";
@@ -595,6 +599,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -616,7 +621,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"podong4cuts/Preview Content\"";
-				DEVELOPMENT_TEAM = 5BC63NF7HR;
+				DEVELOPMENT_TEAM = ADXSYH5NDX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "\"지도 권한 필요\"";
@@ -626,6 +631,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

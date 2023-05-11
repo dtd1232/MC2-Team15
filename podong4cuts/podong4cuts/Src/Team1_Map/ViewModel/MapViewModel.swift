@@ -9,27 +9,15 @@ import SwiftUI
 import MapKit
 import CoreLocation
 
-struct MapViewModel: UIViewRepresentable {
+struct MapView_3: UIViewRepresentable {
     @Binding var region: MKCoordinateRegion
-    var annotations: [CustomAnnotation]
-    let initialLocation = CLLocationCoordinate2D(latitude: 37.517496, longitude: 126.959118)
-    let regionForBoundary = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 36.06149, longitude: 129.38306),
-      latitudinalMeters: 7000,
-      longitudinalMeters: 7000
-    )
-    let zoomRange = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: 20000)
+    var annotations: [CoverButton]
     
-      
-   
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView()
 //        coordinator 사용시 아래 delegate 주석 해제
 //        mapView.delegate = context.coordinator
         mapView.showsUserLocation = true
-        mapView.setCameraBoundary(
-            MKMapView.CameraBoundary(coordinateRegion: regionForBoundary), animated: true
-        )
-        mapView.setCameraZoomRange(zoomRange, animated: true)
         
         return mapView
     }
@@ -38,7 +26,6 @@ struct MapViewModel: UIViewRepresentable {
         uiView.setRegion(region, animated: true)
         uiView.removeAnnotations(uiView.annotations)
         uiView.addAnnotations(annotations)
-        //구피 테스트 야미~
 //        showAnnotations 메서드: 지도에 설정한 핀을 한눈에 볼 수 있는 위치로 카메라 이동
 //        uiView.showAnnotations(annotations, animated: false)
     }
@@ -62,7 +49,6 @@ struct MapViewModel: UIViewRepresentable {
 //                annotationView = MKMarkerAnnotationView(annotation: customAnnotation, reuseIdentifier: identifier)
 //            } else {
 //                annotationView?.annotation = customAnnotation
-    
 //            }
 //
 //            return annotationView

@@ -20,35 +20,49 @@ struct MapView: View {
     //    @State private var reloadMapView = false
     @StateObject var manager = LocationManager()
     @State private var currentLocationManager = CLLocationManager()
-    @State private var annotations: [CustomAnnotation] = []
+    @State private var annotations: [CoverButton] = []
     
     //goopy's code
     @ObservedObject var VM: PodongViewModel
-    let data: AppData
-    @State private var selectedSpot: AppData? = nil
-    @State private var isDetailSheetPresented : Bool = false
+
+
+    
+    
+    
     
     
     var body: some View {
+        
         NavigationView{
-            VStack{
                 ZStack{
-                    //MapViewModel로 구현, MkMapView
-                    MapViewModel(region: $manager.region, annotations: annotations)
-                        .onAppear{
-                            addAnnotations()
-                        }
-                    //  Map Struct로 구현.
-                    //  Map(coordinateRegion: $manager.region,
-                    //                    interactionModes: MapInteractionModes.all,
-                    //                    showsUserLocation: true,
-                    //                    userTrackingMode: $tracking,
-                    //                    annotationItems: MapLocations) { locations in
-                    //                    MapMarker(coordinate: locations.coordinate, tint: .red)
-                    //                }
+                    
+                    // [2] Map Struct로 구현.
+                        Map(coordinateRegion: $manager.region,
+                            interactionModes: MapInteractionModes.all,
+                            showsUserLocation: true,
+                            userTrackingMode: $tracking,
+                            annotationItems: annotations) { locations in
+                                MapAnnotation(coordinate: locations.coordinate) {
+                                        CustomCoverButton(VM: self.VM)
+                                        .onTapGesture {
+                                            VM.selectedSpot = VM.spotdata[locations.number]
+                                            VM.spotdata[VM.selectedNumber].isDetailSheetPresented = true
+                                        }//: onTapDesture
+                                    
+                                }
+                            
+                            }
+                            .onAppear {
+                                addAnnotations()
+                            }
+                    
+                    
                     
                     HStack {
                         VStack(alignment: .leading) {
+                            
+                            
+                            // (1) 내 위치로 이동 버튼
                             ZStack{
                                 Circle()
                                     .fill(Color.white)
@@ -64,7 +78,8 @@ struct MapView: View {
                                 .foregroundColor(Color.black)
                             }
                             .padding([.top], 20)
-                            
+                                          
+                            // (2) 영일대로 이동 버튼
                             ZStack{
                                 Circle()
                                     .fill(Color.white)
@@ -80,40 +95,93 @@ struct MapView: View {
                                 }
                                 .font(.system(size: 45))
                                 .foregroundColor(Color.black)
-                            }
-                            
+                            }//】 ZStack
+                                      
                             Spacer()
-                        }
+                        }//】 VStack
                         .padding([.leading], 10)
                         
                         Spacer()
-                    }
-                }
+                    }//】 HStack
+                }//】 ZStack
+        }//】 Navigation
+        .sheet(isPresented: $VM.spotdata[VM.selectedNumber].isDetailSheetPresented) {
+            if let spot = VM.selectedSpot {
+                DetailView()
+                    .environmentObject(
+                        PodongViewModel()
+                    )
+                .presentationDetents([.medium, .large])
             }
-        }
+        }//】 Sheet
+}//: Struct
         
-    }
     
-    func focusOnUserLocation() {
-        guard let userLocation = currentLocationManager.location?.coordinate else { return }
-        manager.region = MKCoordinateRegion(center: userLocation, span: MKCoordinateSpan(latitudeDelta: 0.015, longitudeDelta: 0.015))
-    }
-    
-    func addAnnotations(){
-        // Create your custom annotations here
-        let MapLocations = [
-            CustomAnnotation(coordinate: CLLocationCoordinate2D(latitude: 36.06149, longitude: 129.38306), title: "영일교", subtitle: "Subtitle 1"),
-            CustomAnnotation(coordinate: CLLocationCoordinate2D(latitude: 36.06437, longitude: 129.38937), title: "Space Walk", subtitle: "Subtitle 2"),
-        ]
+        // 내 위치 알려주는 함수
+        func focusOnUserLocation() {
+            guard let userLocation = currentLocationManager.location?.coordinate else { return }
+            manager.region = MKCoordinateRegion(center: userLocation, span: MKCoordinateSpan(latitudeDelta: 0.015, longitudeDelta: 0.015))
+        }//】 func
         
-        // Add the annotations to the array
-        //        annotations.append(MapLocations)
-        annotations.append(contentsOf: MapLocations)
-    }
+        
+    
+        // 맵핀 배열에 추가하는 함수
+        func addAnnotations(){
+            self.annotations = [
+                
+                //[0] 스페이스워크
+                CoverButton(
+                    VM: self.VM,
+                    coordinate: CLLocationCoordinate2D(
+                                    latitude: self.VM.spotdata[0].latitude,
+                                    longitude: self.VM.spotdata[0].longitude), number: 0),
+                
+                //[1] 토마틸로
+                CoverButton(
+                    VM: self.VM,
+                    coordinate: CLLocationCoordinate2D(
+                                    latitude: self.VM.spotdata[1].latitude,
+                                    longitude: self.VM.spotdata[1].longitude), number: 1),
+                
+                //[2] 오브레맨
+                CoverButton(
+                    VM: self.VM,
+                    coordinate: CLLocationCoordinate2D(
+                                    latitude: self.VM.spotdata[2].latitude,
+                                    longitude: self.VM.spotdata[2].longitude), number: 2),
+                
+                //[3] 영일교
+                CoverButton(
+                    VM: self.VM,
+                    coordinate: CLLocationCoordinate2D(
+                                    latitude: self.VM.spotdata[3].latitude,
+                                    longitude: self.VM.spotdata[3].longitude), number: 3),
+                
+                //[4] 글로벌 신화
+                CoverButton(
+                    VM: self.VM,
+                    coordinate: CLLocationCoordinate2D(
+                                    latitude: self.VM.spotdata[4].latitude,
+                                    longitude: self.VM.spotdata[4].longitude), number: 4),
+                
+                //[5] 고래꼬리
+                CoverButton(
+                    VM: self.VM,
+                    coordinate: CLLocationCoordinate2D(
+                                    latitude: self.VM.spotdata[5].latitude,
+                                    longitude: self.VM.spotdata[5].longitude), number: 5
+                )
+                
+            ]
+            
+        }//】 func
+        
 }
 
-struct MapView_Previews: PreviewProvider {
-    static var previews: some View {
-        MapView(VM: PodongViewModel(), data: AppData.sampleAppData)
+
+    struct MapView_Previews: PreviewProvider {
+        static var previews: some View {
+            MapView(VM: PodongViewModel())
+        }
     }
-}
+

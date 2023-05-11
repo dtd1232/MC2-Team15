@@ -5,14 +5,15 @@
 //  Created by Koo on 2023/05/04.
 //
 
+
 import SwiftUI
 
 struct DetailView: View {
     
     //property
-    @ObservedObject var VM: PodongViewModel
-    let data : AppData
-    var number: Int = 0
+    @EnvironmentObject var VM: PodongViewModel
+    
+   
     
     var body: some View {
         VStack{
@@ -22,24 +23,24 @@ struct DetailView: View {
                 //이름& 해시태그
                 VStack{
                     HStack{
-                        Text(data.name)
+                        Text(VM.spotdata[VM.selectedNumber].name)
                             .font(.title)
                             .foregroundColor(.black)
                             .fontWeight(.heavy)
                             .padding(.vertical, 5)
                         
-                        Image(systemName: VM.spotdata[number].isOpened ? "lock.open.fill" : "lock.fill")
+                        Image(systemName: VM.spotdata[VM.selectedNumber].isOpened ? "lock.open.fill" : "lock.fill")
                             .font(.title2)
                             .foregroundColor(
-                                VM.spotdata[number].isOpened ? .gray.opacity(0.2) : .gray.opacity(0.9)
+                                VM.spotdata[VM.selectedNumber].isOpened ? .gray.opacity(0.1) : .gray.opacity(0.9)
                             )
-                            .animation(.easeInOut(duration: 0.2), value: VM.spotdata[0].isOpened)
+                            .animation(.easeInOut(duration: 0.2), value: VM.spotdata[VM.selectedNumber].isOpened)
                         
                         
                         Spacer()
                         
                     }//】 HStack
-                    Text(data.hashtag)
+                    Text(VM.spotdata[VM.selectedNumber].hashtag)
                         .font(.headline)
                         .foregroundColor(.gray.opacity(0.8))
                         .hLeading()
@@ -71,7 +72,7 @@ struct DetailView: View {
                     VStack(spacing: 5){
                         //1. 사진
                         TabView{
-                            ForEach(data.gallary, id:\.self){index in
+                            ForEach(VM.spotdata[VM.selectedNumber].gallary, id:\.self){index in
                                 Image(index)
                                     .resizable()
                                     .scaledToFit()
@@ -88,7 +89,7 @@ struct DetailView: View {
                             Text("[ 포동 후기 ]")
                                 .font(.title3)
                                 .fontWeight(.bold)
-                            Text(data.postScript)
+                            Text(VM.spotdata[VM.selectedNumber].postScript)
                             
                         }//: VStack
                         .padding()
@@ -106,7 +107,7 @@ struct DetailView: View {
                                     .font(.title3)
                                     .fontWeight(.bold)
                                 ZStack{
-                                    Text(data.location)
+                                    Text(VM.spotdata[VM.selectedNumber].location)
                                         .hCenter()
                                     
                                 }//: ZStack
@@ -138,7 +139,7 @@ struct DetailView: View {
                 .shadow(color: Color.gray.opacity(0.3), radius: 10, y: 3)
                 
                 Button {
-                    VM.spotdata[number].isOpened = true
+                    VM.spotdata[VM.selectedNumber].isOpened = true
                 } label: {
                     RoundedRectangle(cornerRadius: 50)
                         .frame(width: 330, height: 50)
@@ -166,7 +167,7 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(VM: PodongViewModel(), data: AppData.sampleAppData, number: 0)
+        DetailView()
+            .environmentObject(PodongViewModel())
     }
 }
-

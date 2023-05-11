@@ -6,43 +6,22 @@
 //
 
 import SwiftUI
+import CoreLocation
+import MapKit
 
-struct CoverButton: View {
+class CoverButton: NSObject, MKAnnotation, Identifiable {
     
     //property
     @ObservedObject var VM: PodongViewModel
-    let data: AppData
-    var number: Int = 0
+    var coordinate: CLLocationCoordinate2D
+    var number: Int
     
-    var body: some View {
+    init(VM: PodongViewModel, coordinate: CLLocationCoordinate2D, number: Int) {
         
-        VStack{
-            ZStack{
-                Circle()
-                    .frame(width: 50)
-                    .foregroundColor(.white)
-                    .shadow(color: VM.spotdata[number].isOpened ? Color.green.opacity(0.8) : Color.red.opacity(0.8),
-                            radius: 4, y:2)
-                    
-                Image(data.cover)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 40)
-                    .clipShape(RoundedRectangle(cornerRadius: 30))
-            }//: ZStack
-            Text(data.name)
-                .foregroundColor(.gray)
-                .font(.subheadline)
-            
-        }//: VStack
+        self.VM = VM
+        self.coordinate = coordinate
+        self.number = number
         
-        
-    }//: Body
-}
-
-struct CoverButton_Previews: PreviewProvider {
-    static var previews: some View {
-        CoverButton(VM: PodongViewModel(), data: AppData.sampleAppData, number: 0)
     }
-}
-
+    
+}//: Class
