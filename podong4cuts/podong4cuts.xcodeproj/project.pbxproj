@@ -33,6 +33,17 @@
 		67E301942A023ED700A46BF9 /* podong4cutsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E301932A023ED700A46BF9 /* podong4cutsUITests.swift */; };
 		67E301962A023ED700A46BF9 /* podong4cutsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E301952A023ED700A46BF9 /* podong4cutsUITestsLaunchTests.swift */; };
 		F3B215EC2A0CD53A008ACE04 /* CustomCoverButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B215EB2A0CD53A008ACE04 /* CustomCoverButton.swift */; };
+		CE7D092E2A0AA2900052AA7B /* TempARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D092D2A0AA2900052AA7B /* TempARViewContainer.swift */; };
+		CE7D09312A0AA2D70052AA7B /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = CE7D09302A0AA2D70052AA7B /* Experience.rcproject */; };
+		CE7D09332A0AA3580052AA7B /* YoungIlDaeFaceTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D09322A0AA3580052AA7B /* YoungIlDaeFaceTracking.swift */; };
+		CE7D09352A0AA3E30052AA7B /* YoungIlDaeFaceTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D09342A0AA3E30052AA7B /* YoungIlDaeFaceTrackingViewController.swift */; };
+		CE7D09382A0AA40B0052AA7B /* Paperbag_Mask.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CE7D09362A0AA40B0052AA7B /* Paperbag_Mask.usdz */; };
+		CE7D09392A0AA40B0052AA7B /* Floating_Fox.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CE7D09372A0AA40B0052AA7B /* Floating_Fox.usdz */; };
+		CEE626F02A0D034700C21080 /* CameraFrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE626EF2A0D034700C21080 /* CameraFrameView.swift */; };
+		CEE626F22A0D035800C21080 /* PhotoLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE626F12A0D035800C21080 /* PhotoLibraryView.swift */; };
+		CEE626F42A0D036300C21080 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE626F32A0D036300C21080 /* ImageManager.swift */; };
+		CEE626F62A0D03AE00C21080 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE626F52A0D03AE00C21080 /* SoundPlayer.swift */; };
+		CEE626F82A0D03BF00C21080 /* ShutterSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CEE626F72A0D03BF00C21080 /* ShutterSound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +93,17 @@
 		67E301932A023ED700A46BF9 /* podong4cutsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = podong4cutsUITests.swift; sourceTree = "<group>"; };
 		67E301952A023ED700A46BF9 /* podong4cutsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = podong4cutsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F3B215EB2A0CD53A008ACE04 /* CustomCoverButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCoverButton.swift; sourceTree = "<group>"; };
+		CE7D092D2A0AA2900052AA7B /* TempARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempARViewContainer.swift; sourceTree = "<group>"; };
+		CE7D09302A0AA2D70052AA7B /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
+		CE7D09322A0AA3580052AA7B /* YoungIlDaeFaceTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoungIlDaeFaceTracking.swift; sourceTree = "<group>"; };
+		CE7D09342A0AA3E30052AA7B /* YoungIlDaeFaceTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoungIlDaeFaceTrackingViewController.swift; sourceTree = "<group>"; };
+		CE7D09362A0AA40B0052AA7B /* Paperbag_Mask.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Paperbag_Mask.usdz; sourceTree = "<group>"; };
+		CE7D09372A0AA40B0052AA7B /* Floating_Fox.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Floating_Fox.usdz; sourceTree = "<group>"; };
+		CEE626EF2A0D034700C21080 /* CameraFrameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraFrameView.swift; sourceTree = "<group>"; };
+		CEE626F12A0D035800C21080 /* PhotoLibraryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibraryView.swift; sourceTree = "<group>"; };
+		CEE626F32A0D036300C21080 /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		CEE626F52A0D03AE00C21080 /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		CEE626F72A0D03BF00C21080 /* ShutterSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ShutterSound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				11F146802A093D990095F2F4 /* spotdata.json */,
+				CEE626F72A0D03BF00C21080 /* ShutterSound.mp3 */,
 				67E3017C2A023ED700A46BF9 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -154,7 +177,11 @@
 		07F5E6952A02417D00384D44 /* Team2_AR */ = {
 			isa = PBXGroup;
 			children = (
+				CEE626EE2A0D033200C21080 /* CameraViews */,
 				07F5E6972A02419600384D44 /* CameraView.swift */,
+				CE7D092D2A0AA2900052AA7B /* TempARViewContainer.swift */,
+				CE7D09322A0AA3580052AA7B /* YoungIlDaeFaceTracking.swift */,
+				CE7D09342A0AA3E30052AA7B /* YoungIlDaeFaceTrackingViewController.swift */,
 			);
 			path = Team2_AR;
 			sourceTree = "<group>";
@@ -249,6 +276,7 @@
 				67E3017A2A023ED500A46BF9 /* ContentView.swift */,
 				07F5E68D2A0240C200384D44 /* Resources */,
 				07F5E68E2A0240F800384D44 /* Extensions */,
+				CE7D092F2A0AA2B10052AA7B /* ModelAssets */,
 				07F5E6912A02413000384D44 /* Src */,
 				67E3017E2A023ED700A46BF9 /* Preview Content */,
 			);
@@ -278,6 +306,27 @@
 				67E301952A023ED700A46BF9 /* podong4cutsUITestsLaunchTests.swift */,
 			);
 			path = podong4cutsUITests;
+			sourceTree = "<group>";
+		};
+		CE7D092F2A0AA2B10052AA7B /* ModelAssets */ = {
+			isa = PBXGroup;
+			children = (
+				CE7D09372A0AA40B0052AA7B /* Floating_Fox.usdz */,
+				CE7D09362A0AA40B0052AA7B /* Paperbag_Mask.usdz */,
+				CE7D09302A0AA2D70052AA7B /* Experience.rcproject */,
+			);
+			path = ModelAssets;
+			sourceTree = "<group>";
+		};
+		CEE626EE2A0D033200C21080 /* CameraViews */ = {
+			isa = PBXGroup;
+			children = (
+				CEE626F52A0D03AE00C21080 /* SoundPlayer.swift */,
+				CEE626F32A0D036300C21080 /* ImageManager.swift */,
+				CEE626F12A0D035800C21080 /* PhotoLibraryView.swift */,
+				CEE626EF2A0D034700C21080 /* CameraFrameView.swift */,
+			);
+			path = CameraViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,9 +433,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE626F82A0D03BF00C21080 /* ShutterSound.mp3 in Resources */,
 				67E301802A023ED700A46BF9 /* Preview Assets.xcassets in Resources */,
 				11F146812A093D990095F2F4 /* spotdata.json in Resources */,
+				CE7D09392A0AA40B0052AA7B /* Floating_Fox.usdz in Resources */,
 				67E3017D2A023ED700A46BF9 /* Assets.xcassets in Resources */,
+				CE7D09382A0AA40B0052AA7B /* Paperbag_Mask.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,11 +472,19 @@
 				67E3017B2A023ED500A46BF9 /* ContentView.swift in Sources */,
 				11F146782A0937180095F2F4 /* FourCutView.swift in Sources */,
 				07F5E69B2A0241CA00384D44 /* FourCutStudioView.swift in Sources */,
+				CE7D09332A0AA3580052AA7B /* YoungIlDaeFaceTracking.swift in Sources */,
+				CEE626F02A0D034700C21080 /* CameraFrameView.swift in Sources */,
 				07F5E6942A02417200384D44 /* HomeView.swift in Sources */,
 				11F1466D2A0936F30095F2F4 /* PodongModel.swift in Sources */,
 				1178F8C02A04F73900F5EC00 /* LocationManager.swift in Sources */,
 				11FEE6CD2A08E6FE00513041 /* CustomAnnotation.swift in Sources */,
 				11F1467D2A093BFD0095F2F4 /* FrameExtension.swift in Sources */,
+				CE7D09352A0AA3E30052AA7B /* YoungIlDaeFaceTrackingViewController.swift in Sources */,
+				CE7D092E2A0AA2900052AA7B /* TempARViewContainer.swift in Sources */,
+				CE7D09312A0AA2D70052AA7B /* Experience.rcproject in Sources */,
+				CEE626F62A0D03AE00C21080 /* SoundPlayer.swift in Sources */,
+				CEE626F42A0D036300C21080 /* ImageManager.swift in Sources */,
+				CEE626F22A0D035800C21080 /* PhotoLibraryView.swift in Sources */,
 				07F5E6902A02411400384D44 /* Color+.swift in Sources */,
 				07F5E6982A02419600384D44 /* CameraView.swift in Sources */,
 				67E301792A023ED500A46BF9 /* podong4cutsApp.swift in Sources */,
@@ -594,6 +654,13 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "\"지도 권한 필요\"";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"위치 권한 필요\"";
+				DEVELOPMENT_TEAM = CZH2CMCGCZ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -625,7 +692,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "\"지도 권한 필요\"";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"위치 권한 필요\"";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
