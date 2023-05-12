@@ -18,33 +18,38 @@ struct CustomCoverButton: View {
 
                 
                 
-                VStack(spacing: 0){
-                    ZStack{
-                        
-                        Circle()
-                            .frame(width: 42)
-                            .foregroundColor(.white)
-                            .shadow(color: VM.spotdata[selectedNumber].isOpened ? Color.green.opacity(0.8) : Color.red.opacity(0.7),
-                                    radius: 5, y:6)
-                        
-                        Image(VM.spotdata[selectedNumber].cover)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 35)
-                            .clipShape(RoundedRectangle(cornerRadius: 30))
-                    }//: ZStack
-                    Image(systemName: "triangle.fill")
-                        .resizable()
-                        .scaledToFill()
-                        .foregroundColor(.white)
-                        .rotationEffect(Angle(degrees: 180))
-                        .frame(width: 10, height: 10)
-                        .offset(y: -3)
-                    
-                    Text(VM.spotdata[selectedNumber].name)
-                        .foregroundColor(.gray)
-                        .font(.subheadline)
-                }//: VStack
+        VStack(spacing: 0){
+            ZStack{
+                
+                Circle()
+                    .frame(width: 75)
+                    .foregroundColor(VM.spotdata[selectedNumber].isOpened ? Color.green.opacity(0.8) : Color.red.opacity(0.8))
+                    .shadow(color: Color.gray.opacity(0.7),radius: 5, y:6)
+                
+                Circle()
+                    .frame(width: 65)
+                    .foregroundColor(.white)
+                            
+                
+                Image(VM.spotdata[selectedNumber].cover)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 55)
+                    .clipShape(RoundedRectangle(cornerRadius: 30))
+            }//: ZStack
+            Image(systemName: "triangle.fill")
+                .resizable()
+                .scaledToFill()
+                .foregroundColor(VM.spotdata[selectedNumber].isOpened ? Color.green.opacity(0.8) : Color.red.opacity(0.8))
+                .rotationEffect(Angle(degrees: 180))
+                .frame(width: 10, height: 10)
+                .offset(y: -3)
+            
+            Text(VM.spotdata[selectedNumber].name)
+                .foregroundColor(.gray)
+                .font(.headline)
+                .fontWeight(.bold)
+        }//: VStack
         
         
     }//】 Body
