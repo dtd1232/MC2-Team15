@@ -44,6 +44,7 @@
 		CEE626F42A0D036300C21080 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE626F32A0D036300C21080 /* ImageManager.swift */; };
 		CEE626F62A0D03AE00C21080 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE626F52A0D03AE00C21080 /* SoundPlayer.swift */; };
 		CEE626F82A0D03BF00C21080 /* ShutterSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CEE626F72A0D03BF00C21080 /* ShutterSound.mp3 */; };
+		CEE627C42A0F92EB00C21080 /* TempSnapShotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE627C32A0F92EB00C21080 /* TempSnapShotView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		CEE626F32A0D036300C21080 /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		CEE626F52A0D03AE00C21080 /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		CEE626F72A0D03BF00C21080 /* ShutterSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ShutterSound.mp3; sourceTree = "<group>"; };
+		CEE627C32A0F92EB00C21080 /* TempSnapShotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempSnapShotView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,6 +327,7 @@
 				CEE626F32A0D036300C21080 /* ImageManager.swift */,
 				CEE626F12A0D035800C21080 /* PhotoLibraryView.swift */,
 				CEE626EF2A0D034700C21080 /* CameraFrameView.swift */,
+				CEE627C32A0F92EB00C21080 /* TempSnapShotView.swift */,
 			);
 			path = CameraViews;
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 				11FEE6CD2A08E6FE00513041 /* CustomAnnotation.swift in Sources */,
 				11F1467D2A093BFD0095F2F4 /* FrameExtension.swift in Sources */,
 				CE7D09352A0AA3E30052AA7B /* YoungIlDaeFaceTrackingViewController.swift in Sources */,
+				CEE627C42A0F92EB00C21080 /* TempSnapShotView.swift in Sources */,
 				CE7D092E2A0AA2900052AA7B /* TempARViewContainer.swift in Sources */,
 				CE7D09312A0AA2D70052AA7B /* Experience.rcproject in Sources */,
 				CEE626F62A0D03AE00C21080 /* SoundPlayer.swift in Sources */,
